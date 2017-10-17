@@ -12,7 +12,7 @@ public:
     //contructor
     planets();
     //overload constructor
-    planets(string, double);
+    planets(string, int, double);
     //Accessor function
     string getName() const;
     // getName - return the name
@@ -21,4 +21,4 @@ private:
     string newName;
     int newHeight;
     double newWeight;
-};
+}

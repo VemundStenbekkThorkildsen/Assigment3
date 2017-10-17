@@ -7,8 +7,8 @@ LIBS += -LC:\Armadillo\newblas -llibblas
 LIBS += -LC:\Armadillo\newblas -lliblapack
 
 
-INCLUDEPATH += C:\Qt\armadillo-8.100.1\include
-DEPENDPATH += C:\Qt\armadillo-8.100.1\include
+INCLUDEPATH += C:\Armadillo\include
+DEPENDPATH += C:\Armadillo\include
 
 
 SOURCES += main.cpp \
