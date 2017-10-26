@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6350 64-bit) (preloaded format=pdflatex 2017.9.21)  26 OCT 2017 19:55
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6350 64-bit) (preloaded format=pdflatex 2017.9.21)  26 OCT 2017 20:34
 entering extended mode
 **./Assignment3.tex
 (Assignment3.tex
@@ -762,7 +762,7 @@ Package pdftex.def Info: FirstModel.jpg used on input line 143.
 <ThreeBody.jpg, id=27, 1927.2pt x 966.61125pt>
 File: ThreeBody.jpg Graphic file (type jpg)
  <use ThreeBody.jpg>
-Package pdftex.def Info: ThreeBody.jpg used on input line 151.
+Package pdftex.def Info: ThreeBody.jpg used on input line 167.
 (pdftex.def)             Requested size: 770.86636pt x 386.63765pt.
 
 
@@ -771,7 +771,7 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 <2dsolsys.jpg, id=28, 1927.2pt x 966.61125pt>
 File: 2dsolsys.jpg Graphic file (type jpg)
  <use 2dsolsys.jpg>
-Package pdftex.def Info: 2dsolsys.jpg used on input line 160.
+Package pdftex.def Info: 2dsolsys.jpg used on input line 176.
 (pdftex.def)             Requested size: 770.86636pt x 386.63765pt.
 
 
@@ -780,22 +780,22 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 <3dsolsys.jpg, id=29, 1927.2pt x 966.61125pt>
 File: 3dsolsys.jpg Graphic file (type jpg)
  <use 3dsolsys.jpg>
-Package pdftex.def Info: 3dsolsys.jpg used on input line 168.
+Package pdftex.def Info: 3dsolsys.jpg used on input line 184.
 (pdftex.def)             Requested size: 674.53012pt x 338.319pt.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[4 <./FirstModel.jpg>] [5 <./ThreeBody.jpg>]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 209.
- [6 <./2dsolsys.jpg>] [7 <./3dsolsys.jpg>]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 209.
+[4 <./FirstModel.jpg>] [5 <./ThreeBody.jpg>] [6 <./2dsolsys.jpg>]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 228.
+ [7 <./3dsolsys.jpg>]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 228.
  (Assignment3.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 209.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 209.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 228.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 228.
 Package rerunfilecheck Info: File `Assignment3.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 209.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 228.
  ) 
 Here is how much of TeX's memory you used:
  8408 strings out of 493323
@@ -813,7 +813,7 @@ nts/type1/public/amsfonts/cm/cmr10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1
 /public/amsfonts/cm/cmr7.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/am
 sfonts/cm/cmsy10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/c
 m/cmsy7.pfb>
-Output written on Assignment3.pdf (7 pages, 585805 bytes).
+Output written on Assignment3.pdf (7 pages, 586144 bytes).
 PDF statistics:
  81 PDF objects out of 1000 (max. 8388607)
  12 named destinations out of 1000 (max. 500000)
