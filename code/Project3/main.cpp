@@ -1,4 +1,3 @@
-#define _USE_MATH_DEFINES
 #include <iostream>
 #include <cmath>
 #include <stdlib.h>
@@ -16,18 +15,17 @@ int main()
             "mercury and sun model and 'final' for the final solarsystem: " << endl;
     string answer = ""; //Converting user input into string
     getline(cin, answer);
-    answer = "";
     cout << "Now choose what integrator you want to use, either Euler forward method (type 'Euler') or velocity Verlet method"
             "(type 'Verlet'): " << endl;
     string answer2 = "";
     getline(cin, answer2);
-    answer2 = "Verlet";
+
     solarSystem solarSystem;
     double massSun = 2e30;
     //First model
     if(answer=="two"){
         solarSystem.planet(components(0,0,0), components(0,0,0), 1.0);
-        solarSystem.planet(components(0,0,0), components(0,2.0*M_PI, 0), 3e-6);
+        solarSystem.planet(components(0,0,0), components(0,2*3.14, 0), 3e-6);
     }
 
     //Second model
@@ -70,13 +68,13 @@ int main()
         solarSystem.planet( components(1.055312162621389E+01, -3.171190456877188E+01, 3.407868079992951E-01), components(3.049404197428726E-03, 3.449806073416288E-04, -9.077532832745567E-04)*365, (1.31e22/massSun));
     }
     vector<body> &planets = solarSystem.planets(); //List of all planets (objects)
-    double n = 10000; //Number of steps
+    double n = 100000; //Number of steps
     double years = 1; //Years we want the planets to rotate around the sun
     double h = years/(n); //Number of integration points
     verlet solver(h); //Integration object
-    string position = "positionFirstModel.txt"; //Name of the output file
+    string position = "position.txt"; //Name of the output file
     ofstream outfile(position);
-    string perihelion = "perihelionRelativistic.txt";
+    string perihelion = "theta.txt";
     ofstream outfile2(perihelion);
     string perihelionDistance = "perihelionDistance.txt";
     ofstream outfile3(perihelionDistance);
@@ -85,7 +83,6 @@ int main()
     //For-loop changing what planet we are dealing with
     for (int i = 0; i<planets.size(); i++){
         body &planet = planets[i];
-        cout << "ouu"<< endl;
         cout << "Position of planets: " << planet.position << " and velocity of planets " << planet.velocity << endl;
     }
     outfile << endl;
@@ -93,34 +90,14 @@ int main()
     outfile3 << endl;
     outfile4 << endl;
 
-
-    //Integration-loop with n steps at an object "solver"
     solarSystem.beregne();
-    double r,r1,r2,x1,y1;
+    //Integration-loop with n steps at an object "solver"
+
+    //cout << solarSystem.m_theta.size() << endl;
     for (int i = 0; i<n; i++){
-
         solver.integrator(solarSystem, answer2);
-        r = solarSystem.planets()[1].position.length();
-
         solarSystem.toFile(outfile, outfile2, outfile3, outfile4);
-
-        // do a test on r, r1, r2
-        if ((r1 < r) && (r1 < r2) && (i > 3)) {
-            //do stuff, this is the minimum
-            double theta = atan(y1/x1);
-
-        }
-
-
-        r2 = r1;
-        r1 = r;
-        x1 = solarSystem.planets()[1].position.x();
-        y1 = solarSystem.planets()[1].position.y();
-  }
-
-
-
-
+    }
     cout << "The solarsystem has: " << solarSystem.planets().size() << " objects" << endl;
 
     return 0;
