@@ -16,7 +16,7 @@ int main()
             "mercury and sun model and 'final' for the final solarsystem: " << endl;
     string answer = ""; //Converting user input into string
     getline(cin, answer);
-    answer = "perihelion";
+    answer = "";
     cout << "Now choose what integrator you want to use, either Euler forward method (type 'Euler') or velocity Verlet method"
             "(type 'Verlet'): " << endl;
     string answer2 = "";
@@ -70,8 +70,8 @@ int main()
         solarSystem.planet( components(1.055312162621389E+01, -3.171190456877188E+01, 3.407868079992951E-01), components(3.049404197428726E-03, 3.449806073416288E-04, -9.077532832745567E-04)*365, (1.31e22/massSun));
     }
     vector<body> &planets = solarSystem.planets(); //List of all planets (objects)
-    double n = 100000; //Number of steps
-    double years = 100; //Years we want the planets to rotate around the sun
+    double n = 10000; //Number of steps
+    double years = 1; //Years we want the planets to rotate around the sun
     double h = years/(n); //Number of integration points
     verlet solver(h); //Integration object
     string position = "positionFirstModel.txt"; //Name of the output file
@@ -85,6 +85,7 @@ int main()
     //For-loop changing what planet we are dealing with
     for (int i = 0; i<planets.size(); i++){
         body &planet = planets[i];
+        cout << "ouu"<< endl;
         cout << "Position of planets: " << planet.position << " and velocity of planets " << planet.velocity << endl;
     }
     outfile << endl;

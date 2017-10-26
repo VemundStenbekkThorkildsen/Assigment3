@@ -35,7 +35,7 @@ MOVE          = mv -f
 TAR           = tar -cf
 COMPRESS      = gzip -9f
 DISTNAME      = Project31.0.0
-DISTDIR = /Users/RobbaK/Documents/GitHub/Assigment3/code/txt/.tmp/Project31.0.0
+DISTDIR = /Users/RobbaK/Documents/GitHub/Assigment3/code/build-Project3-Desktop_Qt_5_9_1_clang_64bit-Debug/.tmp/Project31.0.0
 LINK          = /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang++
 LFLAGS        = -stdlib=libc++ -headerpad_max_install_names $(EXPORT_ARCH_ARGS) -Wl,-syslibroot,/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.13.sdk -mmacosx-version-min=10.10 -Wl,-rpath,@executable_path/Frameworks
 LIBS          = $(SUBLIBS)  
@@ -218,7 +218,6 @@ DIST          = /Users/RobbaK/Qt/5.9.1/clang_64/mkspecs/features/spec_pre.prf \
 		/Users/RobbaK/Qt/5.9.1/clang_64/mkspecs/features/qt_config.prf \
 		/Users/RobbaK/Qt/5.9.1/clang_64/mkspecs/macx-clang/qmake.conf \
 		/Users/RobbaK/Qt/5.9.1/clang_64/mkspecs/features/spec_post.prf \
-		../Project3/.qmake.stash \
 		/Users/RobbaK/Qt/5.9.1/clang_64/mkspecs/features/exclusive_builds.prf \
 		/Users/RobbaK/Qt/5.9.1/clang_64/mkspecs/features/mac/sdk.prf \
 		/Users/RobbaK/Qt/5.9.1/clang_64/mkspecs/features/toolchain.prf \
@@ -421,7 +420,6 @@ Makefile: ../Project3/Project3.pro /Users/RobbaK/Qt/5.9.1/clang_64/mkspecs/macx-
 		/Users/RobbaK/Qt/5.9.1/clang_64/mkspecs/features/qt_config.prf \
 		/Users/RobbaK/Qt/5.9.1/clang_64/mkspecs/macx-clang/qmake.conf \
 		/Users/RobbaK/Qt/5.9.1/clang_64/mkspecs/features/spec_post.prf \
-		.qmake.stash \
 		/Users/RobbaK/Qt/5.9.1/clang_64/mkspecs/features/exclusive_builds.prf \
 		/Users/RobbaK/Qt/5.9.1/clang_64/mkspecs/features/mac/sdk.prf \
 		/Users/RobbaK/Qt/5.9.1/clang_64/mkspecs/features/toolchain.prf \
@@ -602,7 +600,6 @@ Makefile: ../Project3/Project3.pro /Users/RobbaK/Qt/5.9.1/clang_64/mkspecs/macx-
 /Users/RobbaK/Qt/5.9.1/clang_64/mkspecs/features/qt_config.prf:
 /Users/RobbaK/Qt/5.9.1/clang_64/mkspecs/macx-clang/qmake.conf:
 /Users/RobbaK/Qt/5.9.1/clang_64/mkspecs/features/spec_post.prf:
-.qmake.stash:
 /Users/RobbaK/Qt/5.9.1/clang_64/mkspecs/features/exclusive_builds.prf:
 /Users/RobbaK/Qt/5.9.1/clang_64/mkspecs/features/mac/sdk.prf:
 /Users/RobbaK/Qt/5.9.1/clang_64/mkspecs/features/toolchain.prf:
@@ -647,7 +644,6 @@ clean: compiler_clean
 
 distclean: clean 
 	-$(DEL_FILE) $(TARGET) 
-	-$(DEL_FILE) .qmake.stash
 	-$(DEL_FILE) Makefile
 
 
