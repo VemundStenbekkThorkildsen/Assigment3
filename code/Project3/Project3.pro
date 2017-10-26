@@ -14,3 +14,6 @@ HEADERS += \
     body.h \
     verlet.h \
     components.h
+
+QMAKE_CXXFLAGS_RELEASE -= -O2
+QMAKE_CXXFLAGS_RELEASE += -O3

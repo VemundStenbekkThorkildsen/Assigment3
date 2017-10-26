@@ -38,16 +38,11 @@ void solarSystem::beregne(){
 
             //Perihelion
             components AcrossV = apart.cross(planet2.velocity);
-            components force = ((G*planet1.mass*planet2.mass)/pow(distance,3))*apart;
-            //components force = (((G*planet1.mass*planet2.mass)/(pow(distance, 3)))*apart)*(1 + 3*((AcrossV*AcrossV)/(distance*distance*c*c)));
+            //components force = ((G*planet1.mass*planet2.mass)/pow(distance,3))*apart;
+            components force = (((G*planet1.mass*planet2.mass)/(pow(distance, 3)))*apart)*(1 + 3*((AcrossV*AcrossV)/(distance*distance*c*c)));
 
-            m_pDistance = sqrt((planet2.position.index(1)*planet2.position.index(1))+(planet2.position.index(0)*planet2.position.index(0)));
-            if(m_pDistance <= 0.3075+eps){
-                m_theta = atan(planet2.position.index(1)/planet2.position.index(0))*(180/M_PI);
-            }
-            else{
-                m_theta = 999;
-            }
+
+
             //Regular force, no relativity
             planet1.force -= force;
             planet2.force += force;

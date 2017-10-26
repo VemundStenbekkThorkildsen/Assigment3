@@ -61,7 +61,7 @@ Abstract
 Introduction
 }\\
 
-\noindent In this report we will build a model for our solar system. The emphasis will be on creating an object oriented code and calculating the orbits of the planets. The system can be described by using a series of coupled ordinary differential equations. In the first part of the report, a simplified version of the problem will be looked at. This is the hypothetical earth-sun binary situation. Another hypothetical situation will also be looked at, namely a three body system, with Earth, Jupiter and the sun. The equations are rather simple up to three planets, but as the end goal is a system of ten celestial bodies, it will become vital to object orient the code.\\
+\noindent In this report we will build a model for our solar system. The emphasis will be on creating an object oriented code and calculating the orbits of the planets. The system can be described by using a series of coupled ordinary differential equations. In the first part of the report, a simplified version of the problem will be looked at. This is the hypothetical earth-sun binary situation. Another hypothetical situation will also be looked at, namely a three body system, with Earth, Jupiter and the sun. The equations are rather simple up to three planets, but as the end goal is a system of ten celestial bodies, it will become vital to object orient the code. Preservation of kinetic and potential energy will be discussed, in addition to preservation of angular momentum. The last thing that will be looked upon is the perihelion precession of Mercury. \\
 
 \noindent Two different algorithms will be tested. The euler forward algorithm, and the velocity verlet algorithm. Both of them are numerical integration algorithms, and will be discussed later. The code can be found \href{https://github.com/VemundStenbekkThorkildsen/Assigment3}{\textcolor{blue}{here}}. \\   
 
@@ -118,12 +118,7 @@ $$F_{Earth-Jupiter}=G\frac{M_{earth}M_{jupiter}}{d_{Earth-Jupiter}}$$
 
 $$\sum F = F_{Earth-Jupiter}+ F_{Earth-Sun}= M_{earth}G(\frac{M_{jupiter}}{d_{Earth-Jupiter}} + \frac{M_{\odot}}{r^2}) $$
 
-\noindent The same relations act upon Jupiter, but then the mass of Earth is swapped for the mass of Jupiter. The acceleration in all dimensions can be found by dividing with respective masses and decomposing using the relations showed earlier in this chapter. Continuing on this path will only lead to long equations, and headache. Consider the model for the entire solar system. The forces acted upon earth will then be: 
-
-
-$$ \sum F_{Earth}=F_{Sun}+F_{Mercury}+F_{Venus}+F_{Mars}+F_{Jupiter}+F_{Saturn}+F_{Uranus}+F_{Neptune}+F_{Pluto}$$
-
-The forces acting upon the remaining nine celestial bodies can also be expressed as the sum of nine gravitational forces. This underlines the importance of object orientation once again.
+\noindent The same relations act upon Jupiter, but then the mass of Earth is swapped for the mass of Jupiter. The acceleration in all dimensions can be found by dividing with respective masses and decomposing using the relations showed earlier in this chapter. Continuing on this path will only lead to long equations, and headache. Consider the model for the entire solar system. The forces acting upon earth will be the sum of nine gravitational forces. The forces acting upon the remaining nine celestial bodies can also be expressed as the sum of nine gravitational forces. This underlines the importance of object orientation once again.
 
 
 
@@ -143,6 +138,21 @@ The forces acting upon the remaining nine celestial bodies can also be expressed
 {\LARGE\bf
 Results
 }\\
+\begin{figure} [h]  
+
+\centerline{\includegraphics[scale=0.3]{FirstModel.jpg}}
+\caption{The planetary orbit of Earth around the sun, with no other interfering forces. Calculated over 100 years with 10000 integration steps per year. This figure was created by using the velocity verlet algorithm}
+\end{figure}
+
+Figure 1 and 2 is showing models for the Earth-Sun binary system. Both are showing nearly perfect circles, but by playing around with $\bigtriangleup t$, one of the algorithms prove much more solid. As stated earlier, the euler method has fewer FLOPS, but this takes a toll on the accuracy. The velocity verlet algorithm is heavier for the computer to handle, but it gives a much better approximation for each iteration. 
+
+\begin{figure} [h]  
+
+\centerline{\includegraphics[scale=0.40]{ThreeBody.jpg}}
+\caption{The planetary orbits of Earth and Jupiter around the sun, with no other interfering forces. Calculated over 100 years with 10000 integration steps per year.}
+
+\end{figure}
+
 
 
 \begin{figure} [h]  

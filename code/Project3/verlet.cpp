@@ -22,15 +22,19 @@ void verlet::integrator(solarSystem &system, string answer2)
 
     //Verlet velocity method
     if(answer2=="Verlet"){
+
+        for (body &planet : system.planets()){
+            components acc = planet.force/planet.mass;
+            planet.velocity += 0.5*m_h*(acc);
+            planet.position += (planet.velocity)*m_h;
+        }
         system.beregne();
         for (body &planet : system.planets()){
             components acc = planet.force/planet.mass;
-            planet.position += (planet.velocity + 0.5*acc*m_h)*m_h;
-
-            system.beregne();
-
-            acc += planet.force/planet.mass;
             planet.velocity += 0.5*m_h*(acc);
         }
+
+    }
+    else {
     }
 }

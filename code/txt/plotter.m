@@ -84,13 +84,64 @@ ylabel('AU')
 
 
 
+%%
 
-%% 
+Angle=load('perihelion.txt');
+RelativisticAngle=load('perihelionRelativistic.txt');
+
+Angle1=Angle(Angle~=0);
+RelativisticAngle1=RelativisticAngle(RelativisticAngle~=0);
 
 
-        
-        
-        
+Years=linspace(0,100,length(Angle1));
+figure (3)
+plot(Years, Angle1)
+Years2=linspace(0,100,length(RelativisticAngle1));
+figure(4)
+plot(Years2, RelativisticAngle1)
+
+
+%% First model
+
+FirstPos=load('FirstModel.txt');
+
+figure (5)
+ay=subplot(1,2,1);
+plot(ay,FirstPos(:,1),FirstPos(:,2));
+axis square
+title('Verlet')
+xlabel ('AU')
+ylabel ('AU')
+grid on
+
+FirstPosEuler=load('FirstModelEuler.txt');
+
+
+ax=subplot(1,2,2);
+plot(ax,FirstPosEuler(:,1),FirstPosEuler(:,2));
+axis square
+title('Euler')
+xlabel ('AU')
+ylabel ('AU')
+grid on
+
+
+
+%% Three body problem
+
+ThreeBody=load('ThreeBody.txt');
+
+figure (7)
+hold on
+plot(ThreeBody(:,1),ThreeBody(:,2))
+plot(ThreeBody(:,3),ThreeBody(:,4))
+title('Three body problem')
+axis square
+xlabel ('AU')
+ylabel ('AU')
+grid on
+legend('Earth', 'Jupiter');
+
         
     
     
