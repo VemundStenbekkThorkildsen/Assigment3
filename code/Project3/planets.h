@@ -1,24 +1,14 @@
-#pragma once
+#ifndef EULER_H
+#define EULER_H
 
-#include <iostream>
-#include "armadillo"
-#include <string>
 
-using namespace std;
-using namespace arma;
-
-class planets {
+class Euler
+{
 public:
-    //contructor
-    planets();
-    //overload constructor
-    planets(string, int, double);
-    //Accessor function
-    string getName() const;
-    // getName - return the name
+    double m_dt;
+    Euler(double dt);
+    void integrateOneStep(class SolarSystem &system);
+};
 
-private:
-    string newName;
-    int newHeight;
-    double newWeight;
-}
+#endif // EULER_H
+

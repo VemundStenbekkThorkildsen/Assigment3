@@ -19,7 +19,7 @@
 	commentstyle=\color{comment},
 	keywordstyle=\color{keyword},
 	stringstyle=\color{string},
-	backgroundcolor=\color{background},
+	backgroundcolor=\color{white},
 	showstringspaces=false,
 	numbers=left,
 	numbersep=5pt,
@@ -31,10 +31,11 @@
 		{Å}{{\AA}}1
 		{Ø}{{\O}}1
 	}
-\usepackage{setspace}
-\doublespacing
+
 \usepackage{bm}
 \usepackage{hyperref}
+\usepackage[margin=1.25 in]{geometry}
+\usepackage[usenames, dvipsnames]{color}
 
 \begin{document}
 
@@ -46,8 +47,144 @@ Project 3, deadline October 25.
  \includegraphics[scale=0.075]{uio.png}\\
 Authors: Robin D. Kifle, Sander W. Losnedahl and Vemund S. Thorkildsen\\
 University of Oslo, Autumn 2017
+
+\vspace{3cm}
+{\LARGE\bf
+Abstract
+}
+
 \end{center}
 
+\newpage
+
+{\LARGE\bf
+Introduction
+}\\
+
+\noindent In this report we will build a model for our solar system. The emphasis will be on creating an object oriented code and calculating the orbits of the planets. The system can be described by using a series of coupled ordinary differential equations. In the first part of the report, a simplified version of the problem will be looked at. This is the hypothetical earth-sun binary situation. Another hypothetical situation will also be looked at, namely a three body system, with Earth, Jupiter and the sun. The equations are rather simple up to three planets, but as the end goal is a system of ten celestial bodies, it will become vital to object orient the code.\\
+
+\noindent Two different algorithms will be tested. The euler forward algorithm, and the velocity verlet algorithm. Both of them are numerical integration algorithms, and will be discussed later. The code can be found \href{https://github.com/VemundStenbekkThorkildsen/Assigment3}{\textcolor{blue}{here}}. \\   
+
+
+
+
+
+{\LARGE\bf
+Method
+}\\
+
+\noindent For the earth-sun binary system, a simple algorithm was made. In this example, the suns position will be fixed. This approximation is okay to make, as the earths mass only is three millionths of the suns mass. In this system there is only one force:
+
+
+$$
+F_G=\frac{GM_{\odot}M_{\mathrm{Earth}}}{r^2}
+$$
+
+\noindent To use the euler or velocity verlet algorithm, the acceleration must be known. Using newtons second law of motion it it is easy to derive the acceleration. 
+
+
+$$F_G=M_{Earth}*a $$
+
+$$M_{Earth}*a=\frac{GM_{\odot}M_{\mathrm{Earth}}}{r^2} \Rightarrow a=\frac{GM_{\odot}}{r^2}$$
+
+\noindent Eulers forward method consists of three steps. Firstly the acceleration must be known, as well as initial conditions for position and velocity. As shown above, the acceleration can be calculated easily for this case, but it needs to be decomposed into x- and y-coordinates. 
+
+$$a_x=-G\frac{M_{\odot}}{r^2}cos(\theta)=-G\frac{M_{\odot}x}{r^3}$$
+$$a_y=-G\frac{M_{\odot}}{r^2}sin(\theta)=-G\frac{M_{\odot}y}{r^3}$$
+
+\noindent Using that $x=r*cos\theta$ and $y=r*sin\theta$.  The three steps shown for x:
+
+$$a_t=\frac{F_G}{M_{Earth}}$$
+
+$$v_{t+\bigtriangleup t}=v_t + a_t\bigtriangleup t $$
+
+$$x_{t+\bigtriangleup t}=x_t + v_{t+\bigtriangleup t}\bigtriangleup t$$
+
+\noindent The same algorithm applies for y. This algorithm is simple, and only consists of $5n$ FLOPS, but this has its effects on the accuracy. The velocity verlet algorithm can be summarized in four steps. Once again, the algorithm is viable for x- and y-dimension.  
+
+$$a_t=\frac{F}{m}$$
+
+$$x_{t+\bigtriangleup t}=x_t + v_t\bigtriangleup t +\frac{1}{2} a_t\bigtriangleup t^2$$
+
+$$a_{t,t+\bigtriangleup t}=a_t + a_{t+\bigtriangleup t}$$
+
+$$v_{t+\bigtriangleup t}=v_t + \frac{a_{t,t+\bigtriangleup t}}{2}\bigtriangleup t$$
+
+\noindent The velocity verlet algorithm uses $11n$ FLOPS, hence is more time consuming than the Euler forward algorithm. The forces acting upon Earth in the three body problem is more complex. In this case, the force acting upon earth from the sun can be described in the exact same fashion. The new element is the gravitational force of Jupiter. 
+
+$$F_{Earth-Jupiter}=G\frac{M_{earth}M_{jupiter}}{d_{Earth-Jupiter}}$$
+
+\noindent where $d_{Earth-Jupiter}$ is the distance between the planets. The sum of forces acting on earth in this problem: 
+
+$$\sum F = F_{Earth-Jupiter}+ F_{Earth-Sun}= M_{earth}G(\frac{M_{jupiter}}{d_{Earth-Jupiter}} + \frac{M_{\odot}}{r^2}) $$
+
+\noindent The same relations act upon Jupiter, but then the mass of Earth is swapped for the mass of Jupiter. The acceleration in all dimensions can be found by dividing with respective masses and decomposing using the relations showed earlier in this chapter. Continuing on this path will only lead to long equations, and headache. Consider the model for the entire solar system. The forces acted upon earth will then be: 
+
+
+$$ \sum F_{Earth}=F_{Sun}+F_{Mercury}+F_{Venus}+F_{Mars}+F_{Jupiter}+F_{Saturn}+F_{Uranus}+F_{Neptune}+F_{Pluto}$$
+
+The forces acting upon the remaining nine celestial bodies can also be expressed as the sum of nine gravitational forces. This underlines the importance of object orientation once again.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\newpage
+{\LARGE\bf
+Results
+}\\
+
+
+\begin{figure} [h]  
+
+\centerline{\includegraphics[scale=0.40]{2dsolsys.jpg}}
+\caption{The planetary orbits represented in two dimensions for with $10^5$ integration steps over 500 years.}
+
+\end{figure}
+
+
+\begin{figure} [h]
+
+\centerline{\includegraphics[scale=0.35]{3dsolsys.jpg}}
+\caption{The planetary orbits represented in three dimensions for with $10^5$ integration steps over $500$ years.}
+
+\end{figure}
+
+
+
+
+
+
+
+
+
+\newpage
+{\LARGE\bf
+Conclusion
+}
+
+
+
+
+
+
+
+
+
+\newpage
+{\LARGE\bf
+References
+}
 
 
 
