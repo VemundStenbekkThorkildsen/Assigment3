@@ -142,7 +142,13 @@ ylabel ('AU')
 grid on
 legend('Earth', 'Jupiter');
 
-        
+%% total energy
+
+Energy=load('totalEnergy.txt');
+
+time=linspace(0,100,length(Energy));
+
+plot(time,Energy)
     
     
     
