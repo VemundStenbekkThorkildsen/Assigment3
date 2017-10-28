@@ -36,6 +36,7 @@
 \usepackage{hyperref}
 \usepackage[margin=1.25 in]{geometry}
 \usepackage[usenames, dvipsnames]{color}
+\usepackage{float}
 
 \begin{document}
 
@@ -103,15 +104,17 @@ $$x_{t+\bigtriangleup t}=x_t + v_{t+\bigtriangleup t}\bigtriangleup t$$
 
 \noindent The same algorithm applies for y. This algorithm is simple, and only consists of $5n$ FLOPS, but this has its effects on the accuracy. The velocity verlet algorithm can be summarized in four steps. Once again, the algorithm is viable for x- and y-dimension.  
 
-$$a_t=\frac{F}{m}$$
 
-$$x_{t+\bigtriangleup t}=x_t + v_t\bigtriangleup t +\frac{1}{2} a_t\bigtriangleup t^2$$
 
-$$a_{t,t+\bigtriangleup t}=a_t + a_{t+\bigtriangleup t}$$
+$$v_{t+\frac{1}{2}\bigtriangleup t}=v_t + \frac{1}{2}a_t\bigtriangleup t$$
 
-$$v_{t+\bigtriangleup t}=v_t + \frac{a_{t,t+\bigtriangleup t}}{2}\bigtriangleup t$$
+$$x_{t+\bigtriangleup t}=x_t + v_{t+\frac{1}{2}\bigtriangleup t}\bigtriangleup t $$
 
-\noindent The velocity verlet algorithm uses $11n$ FLOPS, hence is more time consuming than the Euler forward algorithm. The forces acting upon Earth in the three body problem is more complex. In this case, the force acting upon earth from the sun can be described in the exact same fashion. The new element is the gravitational force of Jupiter. 
+$$a_{t+\bigtriangleup t}=a_{t+\bigtriangleup t}$$
+
+$$v_{t+\bigtriangleup t}=v_{t+\frac{1}{2}\bigtriangleup t} + \frac{1}{2}a_{t+\bigtriangleup t}\bigtriangleup t$$
+
+\noindent The new acceleration is computed in the third line by using the updated position. The velocity verlet algorithm uses $9n$ FLOPS, hence is more time consuming than the Euler forward algorithm. The forces acting upon Earth in the three body problem is more complex. In this case, the force acting upon earth from the sun can be described in the exact same fashion. The new element is the gravitational force of Jupiter. 
 
 $$F_{Earth-Jupiter}=G\frac{M_{earth}M_{jupiter}}{d_{Earth-Jupiter}}$$
 
@@ -127,11 +130,22 @@ $$\Rightarrow \frac{1}{2}M_{\otimes}v_e^2 + \frac{-GM_{\odot}M_{\otimes}}{r} = 0
 $$\Rightarrow v_e = \sqrt{\frac{2GM_{\odot}}{r}} = 2\sqrt{2}\pi \frac{AU}{yr}$$
 where $M_{\otimes}$ = mass of Earth, $G$ = the gravitational constant, $M_{\odot}$ = mass of Sun, and $r$ = distance between the Earth and the Sun.
 
+<<<<<<< HEAD
+
+The perihelion precession of Mercury is an important test for the general theory of relativity. The orbit of Mercury is not a perfect circle, but an ellipse. The perihelion of mercury is not at the same place for each orbit, but is slightly shifted. This slight shift is only possible to see clearly if the there are fine integration steps. To find the perihelion, one must find the point, in each orbit, that is closer to the sun than both its immediate neighboring integration points. This is only true for one point per orbit. By using finer and finer integration partition, the precision of the perihelion will get better.   
+
+
+
+
+
+
+=======
 \noindent This project is well suited for an object oriented code since we have planets with given properties, or members in code language, like initial position and velocity as well as mass. Many more members could be assigned to the planet and the code would still work. 
 \\
 Each planet was made as an object, passing initial values into our body class. This class takes the the initial values and turn them into member variables, making them available to all classes in the code. The solarSystem class takes these member variables and does operations on them, such as calculating energy and force for each integration step. The integration itself is encoded in the verlet class, which actually contains both the Euler forward method and the velocity Verlet method. Which method to use is up to the user. Another feature of the solarSystem class is the printing function where the position, angular momentum, perihelion angle and distance and total energy is printed to .txt files.
 \\
 The positions and velocities are vectors which are based on the components class. The class most of all allows for vector based operations such that one can define the position and velocities in terms of their spacial components and this makes the vectors much easier to work with. Other vector operations are also possible with this class such as finding the length of vectors, the cross product of vectors and basic algebraic operations.
+>>>>>>> 1c1f45bfd3604cf05f78f54187c562b58092fcca
 
 
 
@@ -145,59 +159,105 @@ The positions and velocities are vectors which are based on the components class
 {\LARGE\bf
 Results
 }\\
-\begin{figure} [h]  
+\begin{figure} [H]  
 
 \centerline{\includegraphics[scale=0.3]{FirstModel.jpg}}
 \caption{The planetary orbit of Earth around the sun, with no other interfering forces. Calculated over 100 years with 10000 integration steps per year. This figure was created by using the velocity verlet algorithm}
 \end{figure}
 
-\noindent Figure 1 is showing  two models for the Earth-Sun binary system. Both are showing nearly perfect circles, but by playing around with $\bigtriangleup t$, one of the algorithms prove much more solid. As stated earlier, the euler method has fewer FLOPS, but this takes a toll on the accuracy. The velocity verlet algorithm is heavier for the computer to handle, but it gives a much better approximation for each iteration. The kinetic and potential energies should be conserved. 
+\noindent Figure 1 is showing  two models for the Earth-Sun binary system. Both are showing nearly perfect circles, but by playing around with $\bigtriangleup t$, one of the algorithms prove much more solid. As stated earlier, the euler method has fewer FLOPS, but this takes a toll on the accuracy. The velocity verlet algorithm is heavier for the computer to handle, but it gives a much better approximation for each iteration. \\ 
+
+\begin{center}
+\begin{tabular}{|c|c|c|}
+\hline
+  n  & Euler & velocity verlet\\
+\hline
+10        & 0.001s & 0.001s \\
+\hline
+$10^2$      & 0.001s & 0.001s \\
+\hline
+$10^3$      & 0.004s & 0.004s \\
+\hline
+$10^4$      & 0.021s & 0.018s \\
+\hline
+$10^5$      & 0.163s & 0.178s \\
+\hline
+$10^6$      & 1.614s & 1.785s \\
+\hline
+$10^7$      & 15.864 & 17.553 \\
+\hline
+$10^8$      & 159.762s & 177.366  \\
+\hline
+\end{tabular}\\
+Table 1: Timing of the algorithms for the Earth-Sun binary system. Euler is faster than velocity Verlet for high n-values. Both algorithms show a linear increase in computing timing. 
+\end{center}
 
 
 
+\begin{figure} [H]
 
+\centerline{\includegraphics[scale=0.30]{TotalEnergyVerlet.png}}
+\caption{The total energy over 10 years, using Eulers forward algorithm. }
 
-
-
-
-
-
-As there is a circular orbit, there will be small small oscillations in energy. 
-
-
-
-\noindent The exact escape velocity of earth was found to be $v=2\sqrt{2}\pi=8.8857$. By trial and error, the escape velocity was found to be $\approx 8.8$, which is pretty close to the actual velocity. 
-
-\begin{figure} [h]  
-
-\centerline{\includegraphics[scale=0.40]{ThreeBody.jpg}}
-\caption{The planetary orbits of Earth and Jupiter around the sun, with no other interfering forces. Calculated over 100 years with 10000 integration steps per year.}
 
 \end{figure}
 
+\noindent As there is a circular orbit, the kinetic and potential energies should be conserved, but there will be small small oscillations in energy.\\
 
 
-\begin{figure} [h]  
 
+\noindent The exact escape velocity of Earth was found to be $v=2\sqrt{2}\pi=8.8857$. By trial and error, the escape velocity was found to be $\approx 8.8$, which is pretty close to the actual velocity. By replacing the gravitational force from
+
+$$
+F_G=\frac{GM_{\odot}M_{\mathrm{Earth}}}{r^2}
+$$
+
+to
+
+$$
+F_G=\frac{GM_{\odot}M_{\mathrm{Earth}}}{r^{\beta}}
+$$
+
+\noindent and letting $\beta\in(2,3)$. The orbit becomes increasingly unstable.\\
+
+\begin{figure} [H]  
+
+\centerline{\includegraphics[scale=0.25]{ThreeBody3.jpg}}
+\centerline{\includegraphics[scale=0.23]{ThreeBody12.jpg}}
+\centerline{ \includegraphics[scale=0.23]{ThreeBody1001.jpg}}
+\caption{The planetary orbits of Earth and Jupiter around the sun, with no other interfering forces. Calculated over 50 years with 10000 integration per year. In the last picture the sun is not fixed as center.}
+\end{figure}
+\noindent The orbit of Earth is affected by the gravitational force of Jupiter. The change is slight for the the case with normal mass. When multiplying Jupiters mass by ten, earth still manages to stay in a slightly shifted orbit. When the mass is multiplied by 1000, earths orbit gets unstable. This is to be expected, as $M_{jup}*1000\approx0.95M_{\odot}$. The sun is not fixed at the center in the last picture, as we wanted to see the development of the free system (figure 3). 
+
+
+\begin{figure} [H]  
 \centerline{\includegraphics[scale=0.40]{2dsolsys.jpg}}
 \caption{The planetary orbits represented in two dimensions for with $10^5$ integration steps over 500 years.}
-
 \end{figure}
 
 
-\begin{figure} [h]
+
+\begin{figure} [H]
 
 \centerline{\includegraphics[scale=0.35]{3dsolsys.jpg}}
 \caption{The planetary orbits represented in three dimensions for with $10^5$ integration steps over $500$ years.}
 
 \end{figure}
 
-
+In figure x and y, the solar system is depicted in both 2d and 3d. Almost all the planetary orbits are have stable orbits in the x-y plane. The biggest exception is Pluto (figure y). 
 
 \newpage
 {\LARGE\bf
 Discussion
 }
+\\
+Stability of algorithms:\\
+
+
+\noindent The Euler forward method is easy for the computer to handle, but it is not robust for few integration points. The number of FLOPS in the Euler forward algorithm is 5n-flops. Compared to the velocity verlet algorithm, that uses 9n flops, the Euler algorithm is faster. The velocity verlet gets more out of each rotation, hence is more robust for fewer integration points. The potential and kinetic energy oscillates, but is generally conserved over one orbit(figure noe). This is because of the circular orbit,  \\
+
+\noindent The escape velocity of Earth is exactly $v_e=2\sqrt{2}\pi$. This corresponded quite well with the velocity found by trial and error. When the gravitational force was changed by replacing $r^2\rightarrow r^\beta$, the orbit got unstable. The gravitational force will be stronger for low $r$, resulting in higher velocities. The force will decrease more rapidly at higher $r$. This can work like a slingshot-effect, making stable orbits harder to obtain.  
+
 
 
 
