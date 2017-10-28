@@ -43,7 +43,7 @@
 \begin{center}
 {\LARGE\bf
 FYS4150\\
-Project 3, deadline October 29.
+Project 3, deadline October 25.
 }
  \includegraphics[scale=0.075]{uio.png}\\
 Authors: Robin D. Kifle, Sander W. Losnedahl and Vemund S. Thorkildsen\\
@@ -71,11 +71,10 @@ Introduction
 
 
 {\LARGE\bf
-\newpage
 Method
 }\\
 
-\noindent For the earth-sun binary system, a simple algorithm was made. In this example, the suns position will be fixed. This approximation is okay to make, as the Earth's mass only is three millionths of the suns mass. In this system there is only one force:
+\noindent For the earth-sun binary system, a simple algorithm was made. In this example, the suns position will be fixed. This approximation is okay to make, as the earths mass only is three millionths of the suns mass. In this system there is only one force:
 
 
 $$
@@ -122,30 +121,30 @@ $$F_{Earth-Jupiter}=G\frac{M_{earth}M_{jupiter}}{d_{Earth-Jupiter}}$$
 
 $$\sum F = F_{Earth-Jupiter}+ F_{Earth-Sun}= M_{earth}G(\frac{M_{jupiter}}{d_{Earth-Jupiter}} + \frac{M_{\odot}}{r^2}) $$
 
-\noindent The same relations act upon Jupiter, but then the mass of Earth is swapped for the mass of Jupiter. The acceleration in all dimensions can be found by dividing with respective masses and decomposing using the relations showed earlier in this chapter. Continuing on this path will only lead to long equations, and headache. Consider the model for the entire solar system. The forces acting upon earth will be the sum of nine gravitational forces. The forces acting upon the remaining nine celestial bodies can also be expressed as the sum of nine gravitational forces. This underlines the importance of object orientation once again.
+\noindent The same relations act upon Jupiter, but then the mass of Earth is swapped for the mass of Jupiter. The acceleration in all dimensions can be found by dividing with respective masses and decomposing using the relations showed earlier in this chapter. Continuing on this path will only lead to long equations, and headache. Consider the model for the entire solar system. The forces acting upon earth will be the sum of nine gravitational forces. The forces acting upon the remaining nine celestial bodies can also be expressed as the sum of nine gravitational forces. This underlines the importance of object orientation once again.\\
 
-\noindent By using conservation of energy, we can derive a formula for escape velocity. The initial speed will be equal to the escape velocity $v_e$. At a later state, the planet has escaped and is positioned an infinite distance away from the sun and the speed will be close to zero. We will only account for kinetic energy, $E_k$, and gravitational potential energy, $E_p$. By conservation of energy: 
+\noindent This project is well suited for an object oriented code since we have planets with given properties, or members in code language, like initial position and velocity as well as mass. Many more members could be assigned to the planet and the code would still work. \\
+
+
+\noindent Each planet was made as an object, passing initial values into our body class. This class takes the the initial values and turn them into member variables, making them available to all classes in the code. The solarSystem class takes these member variables and does operations on them, such as calculating energy and force for each integration step. The integration itself is encoded in the verlet class, which actually contains both the Euler forward method and the velocity Verlet method. Which method to use is up to the user. Another feature of the solarSystem class is the printing function where the position, angular momentum, perihelion angle and distance and total energy is printed to .txt files.\\
+
+
+\noindent The positions and velocities are vectors which are based on the components class. The class most of all allows for vector based operations such that one can define the position and velocities in terms of their spacial components and this makes the vectors much easier to work with. Other vector operations are also possible with this class such as finding the length of vectors, the cross product of vectors and basic algebraic operations.\\
+
+\noindent By using conservation of energy, it is possible to derive a formula for escape velocity. The initial speed will be equal to the escape velocity $v_e$. At a later state, the planet has escaped and is positioned an infinite distance away from the sun and the speed will be close to zero. We will only account for kinetic energy, $E_k$, and gravitational potential energy, $E_p$. By conservation of energy: 
 $$(E_k+E_p)_i = (E_k+E_p)_{\infty}$$
 $$\Rightarrow \frac{1}{2}M_{\otimes}v_e^2 + \frac{-GM_{\odot}M_{\otimes}}{r} = 0 + 0$$
 $$\Rightarrow v_e = \sqrt{\frac{2GM_{\odot}}{r}} = 2\sqrt{2}\pi \frac{AU}{yr}$$
-where $M_{\otimes}$ = mass of Earth, $G$ = the gravitational constant, $M_{\odot}$ = mass of Sun, and $r$ = distance between the Earth and the Sun.
+where $M_{\otimes}$ = mass of Earth, $G$ = the gravitational constant, $M_{\odot}$ = mass of Sun, and $r$ = distance between the Earth and the Sun.\\
 
-<<<<<<< HEAD
 
-The perihelion precession of Mercury is an important test for the general theory of relativity. The orbit of Mercury is not a perfect circle, but an ellipse. The perihelion of mercury is not at the same place for each orbit, but is slightly shifted. This slight shift is only possible to see clearly if the there are fine integration steps. To find the perihelion, one must find the point, in each orbit, that is closer to the sun than both its immediate neighboring integration points. This is only true for one point per orbit. By using finer and finer integration partition, the precision of the perihelion will get better.   
-
+\noindent The perihelion precession of Mercury is an important test for the general theory of relativity. The orbit of Mercury is not a perfect circle, but an ellipse. The perihelion of mercury is not at the same place for each orbit, but is slightly shifted. This slight shift is only possible to see clearly if the there are fine integration steps. To find the perihelion, one must find the point, in each orbit, that is closer to the sun than both its immediate neighboring integration points. This is only true for one point per orbit. By using finer and finer integration partition, the precision of the perihelion will get better.   
 
 
 
 
 
-=======
-\noindent This project is well suited for an object oriented code since we have planets with given properties, or members in code language, like initial position and velocity as well as mass. Many more members could be assigned to the planet and the code would still work. 
-\\
-Each planet was made as an object, passing initial values into our body class. This class takes the the initial values and turn them into member variables, making them available to all classes in the code. The solarSystem class takes these member variables and does operations on them, such as calculating energy and force for each integration step. The integration itself is encoded in the verlet class, which actually contains both the Euler forward method and the velocity Verlet method. Which method to use is up to the user. Another feature of the solarSystem class is the printing function where the position, angular momentum, perihelion angle and distance and total energy is printed to .txt files.
-\\
-The positions and velocities are vectors which are based on the components class. The class most of all allows for vector based operations such that one can define the position and velocities in terms of their spacial components and this makes the vectors much easier to work with. Other vector operations are also possible with this class such as finding the length of vectors, the cross product of vectors and basic algebraic operations.
->>>>>>> 1c1f45bfd3604cf05f78f54187c562b58092fcca
+
 
 
 
@@ -254,7 +253,7 @@ Discussion
 Stability of algorithms:\\
 
 
-\noindent The Euler forward method is easy for the computer to handle, but it is not robust for few integration points. The number of FLOPS in the Euler forward algorithm is 5n-flops. Compared to the velocity verlet algorithm, that uses 9n flops, the Euler algorithm is faster. The velocity verlet gets more out of each rotation, hence is more robust for fewer integration points. The potential and kinetic energy oscillates, but is generally conserved over one orbit(figure noe). This is because of the circular orbit,  \\
+\noindent The Euler forward method is easy for the computer to handle, but it is not robust for few integration points. The number of FLOPS in the Euler forward algorithm is 5n-flops. Compared to the velocity verlet algorithm, that uses 9n flops, the Euler algorithm is faster. This is shown in table 1. The velocity verlet gets more out of each rotation, hence is more robust for fewer integration points. The velocity that makes a circular orbit is $v=2\pi$. This is pretty logical given the choice of units. As the radius of Earths orbit per definition is 1 AU and the circumference is given by $2\pi r$, the velocity of Earth has to be $2\pi \frac{AU}{year}$ in order to do a full rotation per year. The potential and kinetic energy oscillates, but is generally conserved over one orbit(figure 2). The angular momentum is also conserved  \\
 
 \noindent The escape velocity of Earth is exactly $v_e=2\sqrt{2}\pi$. This corresponded quite well with the velocity found by trial and error. When the gravitational force was changed by replacing $r^2\rightarrow r^\beta$, the orbit got unstable. The gravitational force will be stronger for low $r$, resulting in higher velocities. The force will decrease more rapidly at higher $r$. This can work like a slingshot-effect, making stable orbits harder to obtain.  
 
