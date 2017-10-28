@@ -42,7 +42,7 @@
 \begin{center}
 {\LARGE\bf
 FYS4150\\
-Project 3, deadline October 25.
+Project 3, deadline October 29.
 }
  \includegraphics[scale=0.075]{uio.png}\\
 Authors: Robin D. Kifle, Sander W. Losnedahl and Vemund S. Thorkildsen\\
@@ -70,10 +70,11 @@ Introduction
 
 
 {\LARGE\bf
+\newpage
 Method
 }\\
 
-\noindent For the earth-sun binary system, a simple algorithm was made. In this example, the suns position will be fixed. This approximation is okay to make, as the earths mass only is three millionths of the suns mass. In this system there is only one force:
+\noindent For the earth-sun binary system, a simple algorithm was made. In this example, the suns position will be fixed. This approximation is okay to make, as the Earth's mass only is three millionths of the suns mass. In this system there is only one force:
 
 
 $$
@@ -126,11 +127,11 @@ $$\Rightarrow \frac{1}{2}M_{\otimes}v_e^2 + \frac{-GM_{\odot}M_{\otimes}}{r} = 0
 $$\Rightarrow v_e = \sqrt{\frac{2GM_{\odot}}{r}} = 2\sqrt{2}\pi \frac{AU}{yr}$$
 where $M_{\otimes}$ = mass of Earth, $G$ = the gravitational constant, $M_{\odot}$ = mass of Sun, and $r$ = distance between the Earth and the Sun.
 
-
-
-
-
-
+\noindent This project is well suited for an object oriented code since we have planets with given properties, or members in code language, like initial position and velocity as well as mass. Many more members could be assigned to the planet and the code would still work. 
+\\
+Each planet was made as an object, passing initial values into our body class. This class takes the the initial values and turn them into member variables, making them available to all classes in the code. The solarSystem class takes these member variables and does operations on them, such as calculating energy and force for each integration step. The integration itself is encoded in the verlet class, which actually contains both the Euler forward method and the velocity Verlet method. Which method to use is up to the user. Another feature of the solarSystem class is the printing function where the position, angular momentum, perihelion angle and distance and total energy is printed to .txt files.
+\\
+The positions and velocities are vectors which are based on the components class. The class most of all allows for vector based operations such that one can define the position and velocities in terms of their spacial components and this makes the vectors much easier to work with. Other vector operations are also possible with this class such as finding the length of vectors, the cross product of vectors and basic algebraic operations.
 
 
 
