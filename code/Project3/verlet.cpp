@@ -8,12 +8,14 @@ verlet::verlet(double h):
 
 }
 
-void verlet::integrator(solarSystem &system, string answer2)
+void verlet::integrator(solarSystem &system, string answer2, ofstream &file2)
 {
 
     //Euler forward method
     if(answer2=="Euler"){
-        system.beregne();
+        system.calcForce();
+        system.calcEnergy();
+        system.calcPerihelionAngular(file2);
         for(body &planet : system.planets()) {
             planet.velocity += (planet.force/planet.mass) * m_h;
             planet.position += planet.velocity*m_h;
@@ -22,19 +24,18 @@ void verlet::integrator(solarSystem &system, string answer2)
 
     //Verlet velocity method
     if(answer2=="Verlet"){
-
         for (body &planet : system.planets()){
             components acc = planet.force/planet.mass;
             planet.velocity += 0.5*m_h*(acc);
             planet.position += (planet.velocity)*m_h;
         }
-        system.beregne();
+        system.planets()[0].position = components (0,0,0);
+        system.calcForce();
+        system.calcEnergy();
+        system.calcPerihelionAngular(file2);
         for (body &planet : system.planets()){
             components acc = planet.force/planet.mass;
             planet.velocity += 0.5*m_h*(acc);
         }
-
-    }
-    else {
     }
 }

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6350 64-bit) (preloaded format=pdflatex 2017.10.2)  28 OCT 2017 22:30
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6350 64-bit) (preloaded format=pdflatex 2017.10.2)  28 OCT 2017 22:49
 entering extended mode
 **./Assignment3.tex
 (Assignment3.tex
@@ -618,37 +618,44 @@ Package color Info: Driver file: pdftex.def on input line 147.
 ("C:\Program Files\MiKTeX 2.9\tex\latex\graphics\dvipsnam.def"
 File: dvipsnam.def 2016/06/17 v3.0m Driver-dependent file (DPC,SPQR)
 ))
-(Assignment3.aux)
+("C:\Program Files\MiKTeX 2.9\tex\latex\float\float.sty"
+Package: float 2001/11/08 v1.3d Float enhancements (AL)
+\c@float@type=\count121
+\float@exts=\toks24
+\float@box=\box30
+\@float@everytoks=\toks25
+\@floatcapt=\box31
+) (Assignment3.aux)
 \openout1 = `Assignment3.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 40.
-LaTeX Font Info:    ... okay on input line 40.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 40.
-LaTeX Font Info:    ... okay on input line 40.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 40.
-LaTeX Font Info:    ... okay on input line 40.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 40.
-LaTeX Font Info:    ... okay on input line 40.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 40.
-LaTeX Font Info:    ... okay on input line 40.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 40.
-LaTeX Font Info:    ... okay on input line 40.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 40.
-LaTeX Font Info:    ... okay on input line 40.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 41.
+LaTeX Font Info:    ... okay on input line 41.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 41.
+LaTeX Font Info:    ... okay on input line 41.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 41.
+LaTeX Font Info:    ... okay on input line 41.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 41.
+LaTeX Font Info:    ... okay on input line 41.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 41.
+LaTeX Font Info:    ... okay on input line 41.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 41.
+LaTeX Font Info:    ... okay on input line 41.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 41.
+LaTeX Font Info:    ... okay on input line 41.
 
 (C:\Users\sande\AppData\Roaming\MiKTeX\2.9\tex\context\base\supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count121
+\scratchcounter=\count122
 \scratchdimen=\dimen130
-\scratchbox=\box30
-\nofMPsegments=\count122
-\nofMParguments=\count123
-\everyMPshowfont=\toks24
-\MPscratchCnt=\count124
+\scratchbox=\box32
+\nofMPsegments=\count123
+\nofMParguments=\count124
+\everyMPshowfont=\toks26
+\MPscratchCnt=\count125
 \MPscratchDim=\dimen131
-\MPnumerator=\count125
-\makeMPintoPDFobject=\count126
-\everyMPtoPDFconversion=\toks25
+\MPnumerator=\count126
+\makeMPintoPDFobject=\count127
+\everyMPtoPDFconversion=\toks27
 ) ("C:\Program Files\MiKTeX 2.9\tex\latex\oberdiek\epstopdf-base.sty"
 Package: epstopdf-base 2016/05/15 v2.6 Base part for package epstopdf
 
@@ -662,9 +669,9 @@ Package grfext Info: Graphics extension search list:
 G,.JBIG2,.JB2,.eps]
 (grfext)             \AppendGraphicsExtensions on input line 456.
 )
-\c@lstlisting=\count127
-\AtBeginShipoutBox=\box31
-Package hyperref Info: Link coloring OFF on input line 40.
+\c@lstlisting=\count128
+\AtBeginShipoutBox=\box33
+Package hyperref Info: Link coloring OFF on input line 41.
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\hyperref\nameref.sty"
 Package: nameref 2016/05/21 v2.44 Cross-referencing by name of section
@@ -672,11 +679,11 @@ Package: nameref 2016/05/21 v2.44 Cross-referencing by name of section
 ("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\gettitlestring.sty"
 Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
 )
-\c@section@level=\count128
+\c@section@level=\count129
 )
-LaTeX Info: Redefining \ref on input line 40.
-LaTeX Info: Redefining \pageref on input line 40.
-LaTeX Info: Redefining \nameref on input line 40.
+LaTeX Info: Redefining \ref on input line 41.
+LaTeX Info: Redefining \pageref on input line 41.
+LaTeX Info: Redefining \nameref on input line 41.
 
 (Assignment3.out) (Assignment3.out)
 \@outlinefile=\write3
@@ -720,26 +727,26 @@ LaTeX Info: Redefining \nameref on input line 40.
 <uio.png, id=3, 2474.24374pt x 2223.30624pt>
 File: uio.png Graphic file (type png)
  <use uio.png>
-Package pdftex.def Info: uio.png used on input line 47.
+Package pdftex.def Info: uio.png used on input line 48.
 (pdftex.def)             Requested size: 185.56027pt x 166.74077pt.
  [1
 
 {C:/ProgramData/MiKTeX/2.9/pdftex/config/pdftex.map} <./uio.png (PNG copy)>]
-Underfull \hbox (badness 10000) in paragraph at lines 61--63
+Underfull \hbox (badness 10000) in paragraph at lines 62--64
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 64--65
+Underfull \hbox (badness 10000) in paragraph at lines 65--66
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 66--67
+Underfull \hbox (badness 10000) in paragraph at lines 67--68
 
  []
 
-[2]
+
 Underfull \hbox (badness 10000) in paragraph at lines 74--76
 
  []
@@ -752,70 +759,178 @@ LaTeX Font Info:    Try loading font information for U+msb on input line 80.
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\umsb.fd"
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-) [3] [4]
-<FirstModel.jpg, id=30, 1927.2pt x 966.61125pt>
+) [2] [3] [4]
+<FirstModel.jpg, id=31, 1927.2pt x 966.61125pt>
 File: FirstModel.jpg Graphic file (type jpg)
  <use FirstModel.jpg>
-Package pdftex.def Info: FirstModel.jpg used on input line 150.
+Package pdftex.def Info: FirstModel.jpg used on input line 157.
 (pdftex.def)             Requested size: 578.16447pt x 289.98561pt.
 
-<ThreeBody.jpg, id=31, 1927.2pt x 966.61125pt>
-File: ThreeBody.jpg Graphic file (type jpg)
- <use ThreeBody.jpg>
-Package pdftex.def Info: ThreeBody.jpg used on input line 173.
-(pdftex.def)             Requested size: 770.86636pt x 386.63765pt.
+Underfull \hbox (badness 10000) in paragraph at lines 153--159
+
+ []
 
 
-LaTeX Warning: `h' float specifier changed to `ht'.
+Underfull \hbox (badness 10000) in paragraph at lines 161--162
 
-<2dsolsys.jpg, id=32, 1927.2pt x 966.61125pt>
+ []
+
+
+LaTeX Warning: File `TotalEnergyVerlet.png' not found on input line 192.
+
+
+! Package pdftex.def Error: File `TotalEnergyVerlet.png' not found.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.192 ...phics[scale=0.30]{TotalEnergyVerlet.png}}
+                                                  
+Using draft setting for this image.
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 198--199
+
+ []
+
+[5pdfTeX warning (ext4): destination with the same identifier (name{figure.1}) 
+has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.199 
+      pdfTeX warning (ext4): destination with the same identifier (name{figure.
+2}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.199 
+       <./FirstModel.jpg>]
+Underfull \hbox (badness 10000) in paragraph at lines 214--215
+
+ []
+
+
+LaTeX Warning: File `ThreeBody3.jpg' not found on input line 218.
+
+
+! Package pdftex.def Error: File `ThreeBody3.jpg' not found.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.218 ...ludegraphics[scale=0.25]{ThreeBody3.jpg}}
+                                                  
+Using draft setting for this image.
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+LaTeX Warning: File `ThreeBody12.jpg' not found on input line 219.
+
+
+! Package pdftex.def Error: File `ThreeBody12.jpg' not found.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.219 ...udegraphics[scale=0.23]{ThreeBody12.jpg}}
+                                                  
+Using draft setting for this image.
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+LaTeX Warning: File `ThreeBody1001.jpg' not found on input line 220.
+
+
+! Package pdftex.def Error: File `ThreeBody1001.jpg' not found.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.220 ...egraphics[scale=0.23]{ThreeBody1001.jpg}}
+                                                  
+Using draft setting for this image.
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+<2dsolsys.jpg, id=39, 1927.2pt x 966.61125pt>
 File: 2dsolsys.jpg Graphic file (type jpg)
  <use 2dsolsys.jpg>
-Package pdftex.def Info: 2dsolsys.jpg used on input line 182.
+Package pdftex.def Info: 2dsolsys.jpg used on input line 227.
 (pdftex.def)             Requested size: 770.86636pt x 386.63765pt.
+ [6pdfTeX warning (ext4): destination with the same identifier (name{figure.3})
+ has been already used, duplicate ignored
 
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-<3dsolsys.jpg, id=33, 1927.2pt x 966.61125pt>
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.230 
+      ] <3dsolsys.jpg, id=45, 1927.2pt x 966.61125pt>
 File: 3dsolsys.jpg Graphic file (type jpg)
  <use 3dsolsys.jpg>
-Package pdftex.def Info: 3dsolsys.jpg used on input line 190.
+Package pdftex.def Info: 3dsolsys.jpg used on input line 235.
 (pdftex.def)             Requested size: 674.53012pt x 338.319pt.
 
+[7pdfTeX warning (ext4): destination with the same identifier (name{figure.4}) 
+has been already used, duplicate ignored
 
-LaTeX Warning: `h' float specifier changed to `ht'.
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.239 
+       <./2dsolsys.jpg>] [8pdfTeX warning (ext4): destination with the same ide
+ntifier (name{figure.5}) has been already used, duplicate ignored
 
-[5 <./FirstModel.jpg>] [6 <./ThreeBody.jpg>] [7 <./2dsolsys.jpg>]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 234.
- [8 <./3dsolsys.jpg>]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 234.
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.242 \newpage
+               <./3dsolsys.jpg>]
+Underfull \hbox (badness 10000) in paragraph at lines 244--248
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 250--251
+
+ []
+
+[9] [10]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 287.
+ [11]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 287.
  (Assignment3.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 234.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 234.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 287.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 287.
 Package rerunfilecheck Info: File `Assignment3.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 234.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 287.
  ) 
 Here is how much of TeX's memory you used:
- 8409 strings out of 493323
- 118943 string characters out of 3139066
- 219708 words of memory out of 3000000
- 11831 multiletter control sequences out of 15000+200000
- 8702 words of font info for 33 fonts, out of 3000000 for 9000
+ 8468 strings out of 493323
+ 119657 string characters out of 3139066
+ 222052 words of memory out of 3000000
+ 11878 multiletter control sequences out of 15000+200000
+ 8870 words of font info for 34 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 28i,8n,40p,891b,357s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 28i,8n,40p,891b,323s stack positions out of 5000i,500n,10000p,200000b,50000s
 <C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Pr
 ogram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Program Fi
 les/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Program Files/MiKT
 eX 2.9/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Program Files/MiKTeX 2.9/fo
 nts/type1/public/amsfonts/cm/cmr10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1
-/public/amsfonts/cm/cmr7.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/am
-sfonts/cm/cmsy10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/c
-m/cmsy7.pfb>
-Output written on Assignment3.pdf (8 pages, 592565 bytes).
+/public/amsfonts/cm/cmr5.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/am
+sfonts/cm/cmr7.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/
+cmsy10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy7.pf
+b><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
+Output written on Assignment3.pdf (11 pages, 561922 bytes).
 PDF statistics:
- 86 PDF objects out of 1000 (max. 8388607)
- 13 named destinations out of 1000 (max. 500000)
- 26 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 106 PDF objects out of 1000 (max. 8388607)
+ 17 named destinations out of 1000 (max. 500000)
+ 21 words of extra memory for PDF output out of 10000 (max. 10000000)
 

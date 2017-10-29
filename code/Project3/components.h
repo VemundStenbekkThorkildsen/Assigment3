@@ -9,16 +9,14 @@ class components{
 public:
     //Initializing constructors
     components();
+
     //Overload contructor
     components(double, double, double); //position x,y,z
     double lengthSquared();
     double length();
     void zeros();
     components cross(components otherVector);
-    double dot(components otherVector);
     double index(int num);
-    void normalize();
-    components normalized();
 
     // Getters and setters
     double x() const { return xyz[0]; }
@@ -29,8 +27,6 @@ public:
     void setZ(double z) { xyz[2] = z; }
 
     // Convenience functions
-    void print();
-    void print(string name);
     friend ostream& operator<<(ostream& os, const components& myVector); // Allows cout << myVector << endl;
 
     // Operators
