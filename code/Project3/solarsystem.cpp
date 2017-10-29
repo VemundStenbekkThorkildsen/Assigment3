@@ -34,11 +34,11 @@ void solarSystem::calcForce(){
             distance = apart.length();
 
             //Relativistic force
-            components AcrossV = apart.cross(planet2.velocity);
-            components force = (((G*planet1.mass*planet2.mass)/(pow(distance, 3)))*apart)*(1 + 3*((AcrossV.lengthSquared())/(distance*distance*c*c)));
+            //components AcrossV = apart.cross(planet2.velocity);
+            //components force = (((G*planet1.mass*planet2.mass)/(pow(distance, 3)))*apart)*(1 + 3*((AcrossV.lengthSquared())/(distance*distance*c*c)));
 
             //Newtonian force
-            //components force = ((G*planet1.mass*planet2.mass)/pow(distance,3))*apart;
+            components force = ((G*planet1.mass*planet2.mass)/pow(distance,4))*apart;
             planet1.force -= force;
             planet2.force += force;
         }
@@ -78,7 +78,7 @@ void solarSystem::calcPerihelionAngular(ofstream &file2){
             y = (planet2.position.index(1)); //Current y-position
             if(((r1) < (r)) && ((r1) < (r2))){
                 m_theta = (atan(y1 / x1)*((3600*180)/M_PI)); //Angle to perihelion
-                file2 << setprecision(15) << m_theta << endl;
+                //file2 << setprecision(15) << m_theta << endl;
             }
             x2=x1; //Setting previous previous step to previous step in x-direction
             x1=x; //Setting previous step to current step
@@ -119,11 +119,11 @@ void solarSystem::toFile(ofstream &file, ofstream &file2, ofstream &file3, ofstr
 {
 
     for(body &planet : m_planets) {
-        //file << setprecision(10) << planet.position.x() << " " << setprecision(10) << planet.position.y() << " " << setprecision(10) << planet.position.z() << endl;
+        file << setprecision(10) << planet.position.x() << " " << setprecision(10) << planet.position.y() << " " << setprecision(10) << planet.position.z() << endl;
         //file4 << setprecision(10) << m_totalE << endl;
         //file5 << setprecision(10) << m_angularMomentum << endl;
     }
-    //file << endl;
+    file << endl;
     //file4 << endl;
     //file5 << endl;
     for(int i=0;i<1;i++){
