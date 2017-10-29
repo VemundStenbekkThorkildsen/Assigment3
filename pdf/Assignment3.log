@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6350 64-bit) (preloaded format=pdflatex 2017.9.21)  29 OCT 2017 14:39
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6350 64-bit) (preloaded format=pdflatex 2017.9.21)  29 OCT 2017 15:46
 entering extended mode
 **./Assignment3.tex
 (Assignment3.tex
@@ -784,6 +784,21 @@ Underfull \hbox (badness 10000) in paragraph at lines 144--146
 
  []
 
+
+Underfull \hbox (badness 10000) in paragraph at lines 148--149
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 157--158
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 159--160
+
+ []
+
 [4] <FirstModel.jpg, id=31, 1927.2pt x 966.61125pt>
 File: FirstModel.jpg Graphic file (type jpg)
  <use FirstModel.jpg>
@@ -875,13 +890,12 @@ Package pdftex.def Info: 3dsolsys.jpg used on input line 259.
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
 l.263 
-       <./2dsolsys.jpg>]
-<perihelion100mill.jpg, id=61, 1927.2pt x 966.61125pt>
-File: perihelion100mill.jpg Graphic file (type jpg)
+       <./2dsolsys.jpg>] <perihelion.jpg, id=61, 1927.2pt x 989.6975pt>
+File: perihelion.jpg Graphic file (type jpg)
 
-<use perihelion100mill.jpg>
-Package pdftex.def Info: perihelion100mill.jpg used on input line 272.
-(pdftex.def)             Requested size: 770.86636pt x 386.63765pt.
+<use perihelion.jpg>
+Package pdftex.def Info: perihelion.jpg used on input line 272.
+(pdftex.def)             Requested size: 578.16447pt x 296.91154pt.
  [9pdfTeX warning (ext4): destination with the same identifier (name{figure.5})
  has been already used, duplicate ignored
 
@@ -894,7 +908,7 @@ entifier (name{figure.6}) has been already used, duplicate ignored
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
 l.276 \newpage
-               <./perihelion100mill.jpg>]
+               <./perihelion.jpg>]
 Underfull \hbox (badness 10000) in paragraph at lines 278--281
 
  []
@@ -909,20 +923,35 @@ Underfull \hbox (badness 10000) in paragraph at lines 292--293
 
  []
 
-[11] [12]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 331.
+
+Underfull \hbox (badness 10000) in paragraph at lines 294--295
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 296--297
+
+ []
+
+[11]
+Underfull \hbox (badness 10000) in paragraph at lines 311--313
+
+ []
+
+[12]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 338.
  [13]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 331.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 338.
  (Assignment3.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 331.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 331.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 338.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 338.
 Package rerunfilecheck Info: File `Assignment3.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 331.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 338.
  ) 
 Here is how much of TeX's memory you used:
  8490 strings out of 493323
- 120142 string characters out of 3139066
+ 120107 string characters out of 3139066
  221052 words of memory out of 3000000
  11897 multiletter control sequences out of 15000+200000
  8702 words of font info for 33 fonts, out of 3000000 for 9000
@@ -937,7 +966,7 @@ nts/type1/public/amsfonts/cm/cmr10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1
 sfonts/cm/cmr7.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/
 cmsy10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy7.pf
 b>
-Output written on Assignment3.pdf (13 pages, 903745 bytes).
+Output written on Assignment3.pdf (13 pages, 907979 bytes).
 PDF statistics:
  120 PDF objects out of 1000 (max. 8388607)
  20 named destinations out of 1000 (max. 500000)

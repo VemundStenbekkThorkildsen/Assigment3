@@ -145,20 +145,20 @@ $$\Rightarrow v_e = \sqrt{\frac{2GM_{\odot}}{r}} = 2\sqrt{2}\pi \frac{AU}{yr}$$
 where $M_{\otimes}$ = mass of Earth, $G$ = the gravitational constant, $M_{\odot}$ = mass of Sun, and $r$ = distance between the Earth and the Sun.\\
 
 
-\noindent The perihelion precession of Mercury is an important test for the general theory of relativity. The orbit of Mercury is not a perfect circle, but an ellipse. The perihelion of mercury is not at the same place for each orbit, but is slightly shifted. This slight shift is only possible to see clearly if the there are fine integration steps. To find the perihelion, one must find the point, in each orbit, that is closer to the sun than both its immediate neighboring integration points. This is only true for one point per orbit. By using finer and finer integration partition, the precision of the perihelion will get better.   
+\noindent The perihelion precession of Mercury is an important test for the general theory of relativity. The orbit of Mercury is not a perfect circle, but an ellipse. The perihelion of mercury is not at the same place for each orbit, but is slightly shifted. This slight shift is only possible to see clearly if the there are fine integration steps. To find the perihelion, one must find the point, in each orbit, that is closer to the sun than both its immediate neighboring integration points. This is only true for one point per orbit. By using finer and finer integration partition, the precision of the perihelion will get better. \\  
 
 
 
 
 
 
-The perihelion precession of Mercury is an important test for the general theory of relativity. The orbit of Mercury is not a perfect circle, but an ellipse. The perihelion of mercury is not at the same place for each orbit, but is slightly shifted. This slight shift is only possible to see clearly if the there are fine integration steps. To find the perihelion, one must find the point, in each orbit, that is closer to the sun than both its immediate neighboring integration points. This is only true for one point per orbit. By using finer and finer integration partition, the precision of the perihelion will get better.   
+   
 
-\noindent This project is well suited for an object oriented code since we have planets with given properties, or members in code language, like initial position and velocity as well as mass. Many more members could be assigned to the planet and the code would still work. 
-\\
-Each planet was made as an object, passing initial values into our body class. This class takes the the initial values and turn them into member variables, making them available to all classes in the code. The solarSystem class takes these member variables and does operations on them, such as calculating energy and force for each integration step. The integration itself is encoded in the verlet class, which actually contains both the Euler forward method and the velocity Verlet method. Which method to use is up to the user. Another feature of the solarSystem class is the printing function where the position, angular momentum, perihelion angle and distance and total energy is printed to .txt files.
-\\
-The positions and velocities are vectors which are based on the components class. The class most of all allows for vector based operations such that one can define the position and velocities in terms of their spacial components and this makes the vectors much easier to work with. Other vector operations are also possible with this class such as finding the length of vectors, the cross product of vectors and basic algebraic operations.
+\noindent This project is well suited for an object oriented code since we have planets with given properties, or members in code language, like initial position and velocity as well as mass. Many more members could be assigned to the planet and the code would still work.\\ 
+
+\noindent Each planet was made as an object, passing initial values into our body class. This class takes the the initial values and turn them into member variables, making them available to all classes in the code. The solarSystem class takes these member variables and does operations on them, such as calculating energy and force for each integration step. The integration itself is encoded in the verlet class, which actually contains both the Euler forward method and the velocity Verlet method. Which method to use is up to the user. Another feature of the solarSystem class is the printing function where the position, angular momentum, perihelion angle and distance and total energy is printed to .txt files.\\
+
+\noindent The positions and velocities are vectors which are based on the components class. The class most of all allows for vector based operations such that one can define the position and velocities in terms of their spacial components and this makes the vectors much easier to work with. Other vector operations are also possible with this class such as finding the length of vectors, the cross product of vectors and basic algebraic operations.
 
 
 
@@ -219,7 +219,7 @@ Table 1: Timing of the algorithms for the Earth-Sun binary system. Euler is fast
 
 \end{figure}
 
-\noindent As there is a circular orbit, the kinetic and potential energies should be conserved, but there will be small small oscillations in energy.\\
+\noindent As there is a circular orbit, the kinetic and potential energies should be conserved, but there will be small small oscillations in energy. The angular momentum is also conserved over one orbit.\\
 
 
 
@@ -269,8 +269,8 @@ In figure x and y, the solar system is depicted in both 2d and 3d. Almost all th
 
 
 \begin{figure} [H]
-\centerline{\includegraphics[scale=0.4]{perihelion100mill.jpg}}
-\caption{The perihelion precession of Mercury computed over one century with 100 million integration points}
+\centerline{\includegraphics[scale=0.3]{perihelion.jpg}}
+\caption{The perihelion precession of Mercury computed over one century with 1 billion integration points}
 \end{figure} 
 
 \newpage
@@ -291,7 +291,13 @@ Discussion
 
 \noindent The escape velocity of Earth is exactly $v_e=2\sqrt{2}\pi$. This corresponded quite well with the velocity found by trial and error. When the gravitational force was changed by replacing $r^2\rightarrow r^\beta$, where $\beta \in(2,3)$, the orbit got unstable. The gravitational force will be stronger for low $r$, resulting in higher velocities. The force will decrease more rapidly at higher $r$. This can work like a slingshot-effect, making stable orbits harder to obtain. \\
 
-\noindent Jupiter does not impact Earths orbit much with its original mass (Figure 3a). Nor does it destabilize earths orbit much when the mass is multiplied by 10, though there is a slight change (figure 3b). When the mass is multiplied by 1000, Jupiter has almost as high mass as the sun. Earth soon escapes for the solar system when Jupiter's mass is this high. Given these starting parameters, Jupiter and the Sun developed an interesting binary system. It was due to this that the sun was chose to not be stationary in this plot(Figure 3c). The velocity verlet solver showed impressing stability for low n-values. It did not show significant large scale weakness before $n\approx 50$ per year. 
+\noindent Jupiter does not impact Earths orbit much with its original mass (Figure 3a). Nor does it destabilize earths orbit much when the mass is multiplied by 10, though there is a slight change (figure 3b). When the mass is multiplied by 1000, Jupiter has almost as high mass as the sun. Earth soon escapes for the solar system when Jupiter's mass is this high. Given these starting parameters, Jupiter and the Sun developed an interesting binary system. It was due to this that the sun was chose to not be stationary in this plot(Figure 3c). The velocity verlet solver showed impressing stability for low n-values. It did not show significant large scale weakness before $n\approx 50$ per year.\\
+
+\noindent The final payoff of this article are the models of the entire solar system. In this system, the sun is also moving. The movement of the sun is immensely small compared all the other planets. This makes total sense, as the mass of all the planets combined only adds up to about 1 percent of the solar mass.\\ 
+
+\noindent Last but not least, the perihelion precession was found to be $\approx 43$ arcseconds (Figure 6). To find this precession, it is important to use a high number of integration points. The detected precession of the perihelion is $\frac{44}{3600}$ of one degree, so this explains the requirement of a high n. 
+
+
 
   
 
@@ -303,8 +309,9 @@ Discussion
 \newpage
 {\LARGE\bf
 Conclusion
-}
+}\\
 
+\noindent Velocity verlet proved to be the best algorithm to use for this project. The improved accuracy more than weigh up the relative low difference in computing times. The escape velocity was found exactly and by trial and error to be $v_e = 2\sqrt{2}\pi$, while the velocity giving a perfect circular orbit was $v=2\pi$. Changing the Newtonian gravity proved to be a bad choice if we want a solar system with stable orbits. The presence of Jupiter does not alter Earths orbit to a big extent. If the mass of Jupiter is increased by a factor of 10, earth still manages to stay in orbit, though shifted a bit. Increasing the mass by a factor of 1000 made the earth leave the solar system altogether. The perihelion precession was found to $\approx 43$ arcseconds for one century. To find this quantity, the resolution had to be high, and was finally found by using 1 billion integration points over 100 years. 
 
 
 
