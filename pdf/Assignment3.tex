@@ -243,21 +243,27 @@ $$
 
 \end{figure}
 
-In figure x and y, the solar system is depicted in both 2d and 3d. Almost all the planetary orbits are have stable orbits in the x-y plane. The biggest exception is Pluto (figure y). 
+In figure x and y, the solar system is depicted in both 2d and 3d. Almost all the planetary orbits are have stable orbits in the x-y plane. The biggest exception is Pluto (figure y).
+
+
+\begin{figure}
+\centerline{\includegraphics[scale=0.4]{perihelion100mill.jpg}}
+\caption{The perihelion precession of Mercury computed over one century with 100 million integration points}
+\end{figure} 
 
 \newpage
 {\LARGE\bf
 Discussion
 }
 \\
-Stability of algorithms:\\
 
 
-\noindent The Euler forward method is easy for the computer to handle, but it is not robust for few integration points. The number of FLOPS in the Euler forward algorithm is 5n-flops. Compared to the velocity verlet algorithm, that uses 9n flops, the Euler algorithm is faster. This is shown in table 1. The velocity verlet gets more out of each rotation, hence is more robust for fewer integration points. The velocity that makes a circular orbit is $v=2\pi$. This is pretty logical given the choice of units. As the radius of Earths orbit per definition is 1 AU and the circumference is given by $2\pi r$, the velocity of Earth has to be $2\pi \frac{AU}{year}$ in order to do a full rotation per year. The potential and kinetic energy oscillates, but is generally conserved over one orbit(figure 2). The angular momentum is also conserved  \\
 
-\noindent The escape velocity of Earth is exactly $v_e=2\sqrt{2}\pi$. This corresponded quite well with the velocity found by trial and error. When the gravitational force was changed by replacing $r^2\rightarrow r^\beta$, the orbit got unstable. The gravitational force will be stronger for low $r$, resulting in higher velocities. The force will decrease more rapidly at higher $r$. This can work like a slingshot-effect, making stable orbits harder to obtain.  
+\noindent The Euler forward method is easy for the computer to handle, but it is not robust for few integration points. The number of FLOPS in the Euler forward algorithm is 5n-flops. Compared to the velocity verlet algorithm, that uses 9n flops, the Euler algorithm is faster. This is shown in table 1. The velocity verlet gets more out of each rotation, hence is more robust for fewer integration points. The velocity that makes a circular orbit is $v=2\pi$. This is pretty logical given the choice of units. As the radius of Earths orbit per definition is 1 AU and the circumference is given by $2\pi r$, the velocity of Earth has to be $2\pi \frac{AU}{year}$ in order to do a full rotation per year. The potential and kinetic energy oscillates, but is generally conserved over one orbit(figure 2). The angular momentum is also conserved. These quantities should be conserved if a planet is an idealized circular orbit, as the radius and velocity is constant.  \\
 
+\noindent The escape velocity of Earth is exactly $v_e=2\sqrt{2}\pi$. This corresponded quite well with the velocity found by trial and error. When the gravitational force was changed by replacing $r^2\rightarrow r^\beta$, where $\beta \in(2,3)$, the orbit got unstable. The gravitational force will be stronger for low $r$, resulting in higher velocities. The force will decrease more rapidly at higher $r$. This can work like a slingshot-effect, making stable orbits harder to obtain.  
 
+lqwekgfkwlfhA
 
 
 
