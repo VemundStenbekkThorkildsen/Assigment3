@@ -261,16 +261,28 @@ $$
 
 \end{figure}
 
+<<<<<<< HEAD
+=======
 
+>>>>>>> 2d4f9f30907598fd3f6cee60aa153ccc0bdad86f
 In figure x and y, the solar system is depicted in both 2d and 3d. Almost all the planetary orbits are have stable orbits in the x-y plane. The biggest exception is Pluto (figure y). 
 
+<<<<<<< HEAD
+\begin{figure}
+=======
 
 
 
 
 \begin{figure} [H]
+<<<<<<< HEAD
 \centerline{\includegraphics[scale=0.3]{perihelion.jpg}}
 \caption{The perihelion precession of Mercury computed over one century with 1 billion integration points}
+=======
+>>>>>>> 2d4f9f30907598fd3f6cee60aa153ccc0bdad86f
+\centerline{\includegraphics[scale=0.4]{perihelion100mill.jpg}}
+\caption{The perihelion precession of Mercury computed over one century with 100 million integration points}
+>>>>>>> 25ba7b870cfe78b02b0a22cf821ebe0d76b90447
 \end{figure} 
 
 \newpage
@@ -278,17 +290,29 @@ In figure x and y, the solar system is depicted in both 2d and 3d. Almost all th
 Discussion
 }
 \\
+<<<<<<< HEAD
+Stability of algorithms:\\
+=======
+>>>>>>> 2d4f9f30907598fd3f6cee60aa153ccc0bdad86f
 
 
 
 
+<<<<<<< HEAD
+=======
 
 
+>>>>>>> 2d4f9f30907598fd3f6cee60aa153ccc0bdad86f
 
 
 
 \noindent The Euler forward method is easy for the computer to handle, but it is not robust for few integration points. The number of FLOPS in the Euler forward algorithm is 5n-flops. Compared to the velocity verlet algorithm, that uses 9n flops, the Euler algorithm is faster. This is shown in table 1. The velocity verlet gets more out of each rotation, hence is more robust for fewer integration points. The velocity that makes a circular orbit is $v=2\pi$. This is pretty logical given the choice of units. As the radius of Earths orbit per definition is 1 AU and the circumference is given by $2\pi r$, the velocity of Earth has to be $2\pi \frac{AU}{year}$ in order to do a full rotation per year. The potential and kinetic energy oscillates, but is generally conserved over one orbit(figure 2). The angular momentum is also conserved. These quantities should be conserved if a planet is an idealized circular orbit, as the radius and velocity is constant.  \\
 
+<<<<<<< HEAD
+\noindent The escape velocity of Earth is exactly $v_e=2\sqrt{2}\pi$. This corresponded quite well with the velocity found by trial and error. When the gravitational force was changed by replacing $r^2\rightarrow r^\beta$, where $\beta \in(2,3)$, the orbit got unstable. The gravitational force will be stronger for low $r$, resulting in higher velocities. The force will decrease more rapidly at higher $r$. This can work like a slingshot-effect, making stable orbits harder to obtain.  
+
+\noindent To find the center of mass one simply have to divide the sum of all the masses by the sum of their positions: 
+=======
 \noindent The escape velocity of Earth is exactly $v_e=2\sqrt{2}\pi$. This corresponded quite well with the velocity found by trial and error. When the gravitational force was changed by replacing $r^2\rightarrow r^\beta$, where $\beta \in(2,3)$, the orbit got unstable. The gravitational force will be stronger for low $r$, resulting in higher velocities. The force will decrease more rapidly at higher $r$. This can work like a slingshot-effect, making stable orbits harder to obtain. \\
 
 \noindent Jupiter does not impact Earths orbit much with its original mass (Figure 3a). Nor does it destabilize earths orbit much when the mass is multiplied by 10, though there is a slight change (figure 3b). When the mass is multiplied by 1000, Jupiter has almost as high mass as the sun. Earth soon escapes for the solar system when Jupiter's mass is this high. Given these starting parameters, Jupiter and the Sun developed an interesting binary system. It was due to this that the sun was chose to not be stationary in this plot(Figure 3c). The velocity verlet solver showed impressing stability for low n-values. It did not show significant large scale weakness before $n\approx 50$ per year.\\
@@ -300,9 +324,12 @@ Discussion
 
 
   
+>>>>>>> 2d4f9f30907598fd3f6cee60aa153ccc0bdad86f
 
 
+$$center of mass = \frac{\sum M_i}{\sum positions_i} $$
 
+\noindent If the system is centred around its center of mass, one would expect the entire solar system to move as the sun gets an initial velocity from not being the center of the system. If the total momentum of the system stays at exactly zero, the planets would orbit the sun as usual despite the movement of the entire solar system.
 
 
 
