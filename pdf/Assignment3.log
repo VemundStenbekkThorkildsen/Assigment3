@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6350 64-bit) (preloaded format=pdflatex 2017.10.2)  28 OCT 2017 22:49
+=======
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6350 64-bit) (preloaded format=pdflatex 2017.9.21)  29 OCT 2017 13:51
+>>>>>>> 218c715cc637d816f1e336e4e2e4249c1ebfb8c6
 entering extended mode
 **./Assignment3.tex
 (Assignment3.tex
@@ -439,7 +443,7 @@ Package: ltxcmds 2016/05/16 v1.23 LaTeX kernel commands for general use (HO)
 \Gin@req@height=\dimen112
 \Gin@req@width=\dimen113
 )
-(C:\Users\sande\AppData\Roaming\MiKTeX\2.9\tex\latex\listings\listings.sty
+(C:\Users\vemun\AppData\Roaming\MiKTeX\2.9\tex\latex\listings\listings.sty
 \lst@mode=\count100
 \lst@gtempboxa=\box28
 \lst@token=\toks22
@@ -453,18 +457,18 @@ Package: ltxcmds 2016/05/16 v1.23 LaTeX kernel commands for general use (HO)
 \lst@lineno=\count105
 \lst@maxwidth=\dimen117
 
-(C:\Users\sande\AppData\Roaming\MiKTeX\2.9\tex\latex\listings\lstmisc.sty
+(C:\Users\vemun\AppData\Roaming\MiKTeX\2.9\tex\latex\listings\lstmisc.sty
 File: lstmisc.sty 2015/06/04 1.6 (Carsten Heinz)
 \c@lstnumber=\count106
 \lst@skipnumbers=\count107
 \lst@framebox=\box29
 )
-(C:\Users\sande\AppData\Roaming\MiKTeX\2.9\tex\latex\listings\listings.cfg
+(C:\Users\vemun\AppData\Roaming\MiKTeX\2.9\tex\latex\listings\listings.cfg
 File: listings.cfg 2015/06/04 1.6 listings configuration
 ))
 Package: listings 2015/06/04 1.6 (Carsten Heinz)
 
-(C:\Users\sande\AppData\Roaming\MiKTeX\2.9\tex\latex\listings\lstlang1.sty
+(C:\Users\vemun\AppData\Roaming\MiKTeX\2.9\tex\latex\listings\lstlang1.sty
 File: lstlang1.sty 2015/06/04 1.6 listings language file
 )
 ("C:\Program Files\MiKTeX 2.9\tex\latex\tools\bm.sty"
@@ -554,7 +558,7 @@ Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
 Package hyperref Info: Bookmarks ON on input line 4751.
 \c@Hy@tempcnt=\count111
 
-(C:\Users\sande\AppData\Roaming\MiKTeX\2.9\tex\latex\url\url.sty
+(C:\Users\vemun\AppData\Roaming\MiKTeX\2.9\tex\latex\url\url.sty
 \Urlmuskip=\muskip11
 Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
 )
@@ -643,7 +647,11 @@ LaTeX Font Info:    ... okay on input line 41.
 LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 41.
 LaTeX Font Info:    ... okay on input line 41.
 
+<<<<<<< HEAD
 (C:\Users\sande\AppData\Roaming\MiKTeX\2.9\tex\context\base\supp-pdf.mkii
+=======
+(C:\Users\vemun\AppData\Roaming\MiKTeX\2.9\tex\context\base\supp-pdf.mkii
+>>>>>>> 218c715cc637d816f1e336e4e2e4249c1ebfb8c6
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count122
 \scratchdimen=\dimen130
@@ -759,6 +767,7 @@ LaTeX Font Info:    Try loading font information for U+msb on input line 80.
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\umsb.fd"
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+<<<<<<< HEAD
 ) [2] [3] [4]
 <FirstModel.jpg, id=31, 1927.2pt x 966.61125pt>
 File: FirstModel.jpg Graphic file (type jpg)
@@ -812,8 +821,44 @@ l.199
 Underfull \hbox (badness 10000) in paragraph at lines 214--215
 
  []
+=======
+) [2]
+Underfull \hbox (badness 10000) in paragraph at lines 124--125
+
+ []
 
 
+Underfull \hbox (badness 10000) in paragraph at lines 126--127
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 129--130
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 132--133
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 137--139
+
+ []
+
+[3] [4] <FirstModel.jpg, id=31, 1927.2pt x 966.61125pt>
+File: FirstModel.jpg Graphic file (type jpg)
+ <use FirstModel.jpg>
+Package pdftex.def Info: FirstModel.jpg used on input line 163.
+(pdftex.def)             Requested size: 578.16447pt x 289.98561pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 159--165
+>>>>>>> 218c715cc637d816f1e336e4e2e4249c1ebfb8c6
+
+ []
+
+<<<<<<< HEAD
 LaTeX Warning: File `ThreeBody3.jpg' not found on input line 218.
 
 
@@ -865,10 +910,81 @@ If that doesn't work, type  X <return>  to quit.
 File: 2dsolsys.jpg Graphic file (type jpg)
  <use 2dsolsys.jpg>
 Package pdftex.def Info: 2dsolsys.jpg used on input line 227.
+=======
+
+Underfull \hbox (badness 10000) in paragraph at lines 167--168
+
+ []
+
+<TotalEnergyVerlet.png, id=32, 1927.2pt x 975.645pt>
+File: TotalEnergyVerlet.png Graphic file (type png)
+
+<use TotalEnergyVerlet.png>
+Package pdftex.def Info: TotalEnergyVerlet.png used on input line 198.
+(pdftex.def)             Requested size: 578.16447pt x 292.69576pt.
+ [5pdfTeX warning (ext4): destination with the same identifier (name{figure.1})
+ has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.203 
+       <./FirstModel.jpg>]
+Underfull \hbox (badness 10000) in paragraph at lines 204--205
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 220--221
+
+ []
+
+<ThreeBody3.jpg, id=39, 1927.2pt x 966.61125pt>
+File: ThreeBody3.jpg Graphic file (type jpg)
+ <use ThreeBody3.jpg>
+Package pdftex.def Info: ThreeBody3.jpg used on input line 224.
+(pdftex.def)             Requested size: 481.79883pt x 241.65222pt.
+
+<ThreeBody12.jpg, id=40, 1927.2pt x 966.61125pt>
+File: ThreeBody12.jpg Graphic file (type jpg)
+ <use ThreeBody12.jpg>
+Package pdftex.def Info: ThreeBody12.jpg used on input line 225.
+(pdftex.def)             Requested size: 443.24669pt x 222.3159pt.
+
+<ThreeBody1001.jpg, id=41, 1927.2pt x 966.61125pt>
+File: ThreeBody1001.jpg Graphic file (type jpg)
+ <use ThreeBody1001.jpg>
+Package pdftex.def Info: ThreeBody1001.jpg used on input line 226.
+(pdftex.def)             Requested size: 443.24669pt x 222.3159pt.
+
+[6pdfTeX warning (ext4): destination with the same identifier (name{figure.2}) 
+has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.229 \noindent
+                The orbit of Earth is affected by the gravitational force of...
+ <./TotalEnergyVerlet.png>]
+Overfull \vbox (69.91217pt too high) has occurred while \output is active []
+
+
+[7pdfTeX warning (ext4): destination with the same identifier (name{figure.3}) 
+has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.229 \noindent
+                The orbit of Earth is affected by the gravitational force of...
+ <./ThreeBody3.jpg> <./ThreeBody12.jpg> <./ThreeBody1001.jpg>]
+<2dsolsys.jpg, id=54, 1927.2pt x 966.61125pt>
+File: 2dsolsys.jpg Graphic file (type jpg)
+ <use 2dsolsys.jpg>
+Package pdftex.def Info: 2dsolsys.jpg used on input line 233.
+>>>>>>> 218c715cc637d816f1e336e4e2e4249c1ebfb8c6
 (pdftex.def)             Requested size: 770.86636pt x 386.63765pt.
  [6pdfTeX warning (ext4): destination with the same identifier (name{figure.3})
  has been already used, duplicate ignored
 
+<<<<<<< HEAD
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
 l.230 
@@ -876,8 +992,36 @@ l.230
 File: 3dsolsys.jpg Graphic file (type jpg)
  <use 3dsolsys.jpg>
 Package pdftex.def Info: 3dsolsys.jpg used on input line 235.
+=======
+<3dsolsys.jpg, id=55, 1927.2pt x 966.61125pt>
+File: 3dsolsys.jpg Graphic file (type jpg)
+ <use 3dsolsys.jpg>
+Package pdftex.def Info: 3dsolsys.jpg used on input line 241.
+>>>>>>> 218c715cc637d816f1e336e4e2e4249c1ebfb8c6
 (pdftex.def)             Requested size: 674.53012pt x 338.319pt.
+ [8pdfTeX warning (ext4): destination with the same identifier (name{figure.4})
+ has been already used, duplicate ignored
 
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.245 
+       <./2dsolsys.jpg>]
+<perihelion100mill.jpg, id=61, 1927.2pt x 966.61125pt>
+File: perihelion100mill.jpg Graphic file (type jpg)
+
+<use perihelion100mill.jpg>
+Package pdftex.def Info: perihelion100mill.jpg used on input line 250.
+(pdftex.def)             Requested size: 770.86636pt x 386.63765pt.
+ [9pdfTeX warning (ext4): destination with the same identifier (name{figure.5})
+ has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.254 \newpage
+               <./3dsolsys.jpg>] [10pdfTeX warning (ext4): destination with the
+ same identifier (name{figure.6}) has been already used, duplicate ignored
+
+<<<<<<< HEAD
 [7pdfTeX warning (ext4): destination with the same identifier (name{figure.4}) 
 has been already used, duplicate ignored
 
@@ -892,10 +1036,18 @@ ntifier (name{figure.5}) has been already used, duplicate ignored
 l.242 \newpage
                <./3dsolsys.jpg>]
 Underfull \hbox (badness 10000) in paragraph at lines 244--248
+=======
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.254 \newpage
+               <./perihelion100mill.jpg>]
+Underfull \hbox (badness 10000) in paragraph at lines 256--259
+>>>>>>> 218c715cc637d816f1e336e4e2e4249c1ebfb8c6
 
  []
 
 
+<<<<<<< HEAD
 Underfull \hbox (badness 10000) in paragraph at lines 250--251
 
  []
@@ -919,6 +1071,31 @@ Here is how much of TeX's memory you used:
  8870 words of font info for 34 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  28i,8n,40p,891b,323s stack positions out of 5000i,500n,10000p,200000b,50000s
+=======
+Underfull \hbox (badness 10000) in paragraph at lines 262--263
+
+ []
+
+[11] [12]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 299.
+ [13]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 299.
+ (Assignment3.aux)
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 299.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 299.
+Package rerunfilecheck Info: File `Assignment3.out' has not changed.
+(rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 299.
+ ) 
+Here is how much of TeX's memory you used:
+ 8490 strings out of 493323
+ 120142 string characters out of 3139066
+ 222052 words of memory out of 3000000
+ 11897 multiletter control sequences out of 15000+200000
+ 8702 words of font info for 33 fonts, out of 3000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 28i,8n,40p,987b,329s stack positions out of 5000i,500n,10000p,200000b,50000s
+>>>>>>> 218c715cc637d816f1e336e4e2e4249c1ebfb8c6
 <C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Pr
 ogram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Program Fi
 les/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Program Files/MiKT
@@ -927,10 +1104,19 @@ nts/type1/public/amsfonts/cm/cmr10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1
 /public/amsfonts/cm/cmr5.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/am
 sfonts/cm/cmr7.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/
 cmsy10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy7.pf
+<<<<<<< HEAD
 b><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
 Output written on Assignment3.pdf (11 pages, 561922 bytes).
 PDF statistics:
  106 PDF objects out of 1000 (max. 8388607)
  17 named destinations out of 1000 (max. 500000)
  21 words of extra memory for PDF output out of 10000 (max. 10000000)
+=======
+b>
+Output written on Assignment3.pdf (13 pages, 900747 bytes).
+PDF statistics:
+ 120 PDF objects out of 1000 (max. 8388607)
+ 20 named destinations out of 1000 (max. 500000)
+ 46 words of extra memory for PDF output out of 10000 (max. 10000000)
+>>>>>>> 218c715cc637d816f1e336e4e2e4249c1ebfb8c6
 
