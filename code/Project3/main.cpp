@@ -27,7 +27,7 @@ int main()
     //First model
     if(answer=="two"){
         solarSystem.planet(components(0,0,0), components(0,0,0), 1.0);
-        solarSystem.planet(components(1,0,0), components(0,2*M_PI, 0), 3e-6);
+        solarSystem.planet(components(1,0,0), components(0,8.8, 0), 3e-6);
     }
 
     //Second model
@@ -71,8 +71,8 @@ int main()
         solarSystem.planet( components(1.055312162621389E+01, -3.171190456877188E+01, 3.407868079992951E-01), components(3.049404197428726E-03, 3.449806073416288E-04, -9.077532832745567E-04)*365, (1.31e22/massSun));
     }
     vector<body> &planets = solarSystem.planets(); //List of all planets (objects)
-    double n = 1000000000; //Number of steps
-    double years = 100; //Years we want the planets to rotate around the sun
+    double n = 1000000; //Number of steps
+    double years = 20; //Years we want the planets to rotate around the sun
     double h = years/(n); //Number of integration points
     verlet solver(h); //Integration object
     string position = "position.txt"; //Name of the output file
