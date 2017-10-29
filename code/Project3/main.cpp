@@ -1,4 +1,6 @@
+#define _USE_MATH_DEFINES
 #include <iostream>
+#include "time.h"
 #include <cmath>
 #include <stdlib.h>
 #include "solarSystem.h"
@@ -25,13 +27,14 @@ int main()
     //First model
     if(answer=="two"){
         solarSystem.planet(components(0,0,0), components(0,0,0), 1.0);
-        solarSystem.planet(components(0,0,0), components(0,2*3.14, 0), 3e-6);
+        solarSystem.planet(components(1,0,0), components(0,2*M_PI, 0), 3e-6);
     }
 
     //Second model
     if(answer=="three"){
         //Sun
         solarSystem.planet(components(0.0070897,-0.0014884,0),components(3.778e-6,-5.67e-6,0)*365,1); //Velocity so momentum is zero
+        //solarSystem.planet(components(0,0,0),components(3.778e-6,-5.67e-6,0)*365,1); //Velocity so momentum is zero
         //Earth
         solarSystem.planet(components(0.91708972,0.41851161,0),components(-7.708603521431721E-03, 1.546968939253316E-02, 0)*365,3.00349e-6);
         //Jupiter
@@ -68,8 +71,8 @@ int main()
         solarSystem.planet( components(1.055312162621389E+01, -3.171190456877188E+01, 3.407868079992951E-01), components(3.049404197428726E-03, 3.449806073416288E-04, -9.077532832745567E-04)*365, (1.31e22/massSun));
     }
     vector<body> &planets = solarSystem.planets(); //List of all planets (objects)
-    double n = 100000; //Number of steps
-    double years = 1; //Years we want the planets to rotate around the sun
+    double n = 1000000000; //Number of steps
+    double years = 100; //Years we want the planets to rotate around the sun
     double h = years/(n); //Number of integration points
     verlet solver(h); //Integration object
     string position = "position.txt"; //Name of the output file
@@ -80,25 +83,33 @@ int main()
     ofstream outfile3(perihelionDistance);
     string totalEnergy = "totalEnergy.txt";
     ofstream outfile4(totalEnergy);
+    string angularmomentum = "angularMomentum.txt";
+    ofstream outfile5(angularmomentum);
     //For-loop changing what planet we are dealing with
     for (int i = 0; i<planets.size(); i++){
         body &planet = planets[i];
-        cout << "Position of planets: " << planet.position << " and velocity of planets " << planet.velocity << endl;
+        cout << "Positions and velocities of planets: " << endl << planet.position << planet.velocity << endl;
     }
     outfile << endl;
     outfile2 << endl;
     outfile3 << endl;
     outfile4 << endl;
+    outfile5 << endl;
 
-    solarSystem.beregne();
+    solarSystem.calcForce();
+    solarSystem.calcEnergy();
+    solarSystem.calcPerihelionAngular(outfile2);
     //Integration-loop with n steps at an object "solver"
-
-    //cout << solarSystem.m_theta.size() << endl;
+    clock_t start,finish;
+    start = clock();
     for (int i = 0; i<n; i++){
-        solver.integrator(solarSystem, answer2);
-        solarSystem.toFile(outfile, outfile2, outfile3, outfile4);
+        solver.integrator(solarSystem, answer2, outfile2);
+        solarSystem.toFile(outfile, outfile2, outfile3, outfile4, outfile5);
     }
+    finish=clock();
+    double time = ((double (finish) - double (start))/CLOCKS_PER_SEC);
     cout << "The solarsystem has: " << solarSystem.planets().size() << " objects" << endl;
+    cout << "Processing time " << time << " using the " << answer2 << " method, with " << n << " steps and for " << years << " years." << endl;
 
     return 0;
 }

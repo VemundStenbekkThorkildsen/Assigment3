@@ -108,11 +108,19 @@ $$x_{t+\bigtriangleup t}=x_t + v_{t+\bigtriangleup t}\bigtriangleup t$$
 $$v_{t+\frac{1}{2}\bigtriangleup t}=v_t + \frac{1}{2}a_t\bigtriangleup t$$
 
 $$x_{t+\bigtriangleup t}=x_t + v_{t+\frac{1}{2}\bigtriangleup t}\bigtriangleup t $$
+<<<<<<< HEAD
 
 $$a_{t+\bigtriangleup t}=a_{t+\bigtriangleup t}$$
 
 $$v_{t+\bigtriangleup t}=v_{t+\frac{1}{2}\bigtriangleup t} + \frac{1}{2}a_{t+\bigtriangleup t}\bigtriangleup t$$
 
+=======
+
+$$a_{t+\bigtriangleup t}=a_{t+\bigtriangleup t}$$
+
+$$v_{t+\bigtriangleup t}=v_{t+\frac{1}{2}\bigtriangleup t} + \frac{1}{2}a_{t+\bigtriangleup t}\bigtriangleup t$$
+
+>>>>>>> 218c715cc637d816f1e336e4e2e4249c1ebfb8c6
 \noindent The new acceleration is computed in the third line by using the updated position. The velocity verlet algorithm uses $9n$ FLOPS, hence is more time consuming than the Euler forward algorithm. The forces acting upon Earth in the three body problem is more complex. In this case, the force acting upon earth from the sun can be described in the exact same fashion. The new element is the gravitational force of Jupiter. 
 
 $$F_{Earth-Jupiter}=G\frac{M_{earth}M_{jupiter}}{d_{Earth-Jupiter}}$$
@@ -142,6 +150,19 @@ where $M_{\otimes}$ = mass of Earth, $G$ = the gravitational constant, $M_{\odot
 
 
 
+
+
+
+<<<<<<< HEAD
+The perihelion precession of Mercury is an important test for the general theory of relativity. The orbit of Mercury is not a perfect circle, but an ellipse. The perihelion of mercury is not at the same place for each orbit, but is slightly shifted. This slight shift is only possible to see clearly if the there are fine integration steps. To find the perihelion, one must find the point, in each orbit, that is closer to the sun than both its immediate neighboring integration points. This is only true for one point per orbit. By using finer and finer integration partition, the precision of the perihelion will get better.   
+
+\noindent This project is well suited for an object oriented code since we have planets with given properties, or members in code language, like initial position and velocity as well as mass. Many more members could be assigned to the planet and the code would still work. 
+\\
+Each planet was made as an object, passing initial values into our body class. This class takes the the initial values and turn them into member variables, making them available to all classes in the code. The solarSystem class takes these member variables and does operations on them, such as calculating energy and force for each integration step. The integration itself is encoded in the verlet class, which actually contains both the Euler forward method and the velocity Verlet method. Which method to use is up to the user. Another feature of the solarSystem class is the printing function where the position, angular momentum, perihelion angle and distance and total energy is printed to .txt files.
+\\
+The positions and velocities are vectors which are based on the components class. The class most of all allows for vector based operations such that one can define the position and velocities in terms of their spacial components and this makes the vectors much easier to work with. Other vector operations are also possible with this class such as finding the length of vectors, the cross product of vectors and basic algebraic operations.
+=======
+>>>>>>> 218c715cc637d816f1e336e4e2e4249c1ebfb8c6
 
 
 
@@ -243,8 +264,12 @@ $$
 
 \end{figure}
 
+<<<<<<< HEAD
+In figure x and y, the solar system is depicted in both 2d and 3d. Almost all the planetary orbits are have stable orbits in the x-y plane. The biggest exception is Pluto (figure y). 
+=======
 In figure x and y, the solar system is depicted in both 2d and 3d. Almost all the planetary orbits are have stable orbits in the x-y plane. The biggest exception is Pluto (figure y).
 
+>>>>>>> 218c715cc637d816f1e336e4e2e4249c1ebfb8c6
 
 \begin{figure}
 \centerline{\includegraphics[scale=0.4]{perihelion100mill.jpg}}
@@ -256,12 +281,22 @@ In figure x and y, the solar system is depicted in both 2d and 3d. Almost all th
 Discussion
 }
 \\
+<<<<<<< HEAD
+Stability of algorithms:\\
+
+
+\noindent The Euler forward method is easy for the computer to handle, but it is not robust for few integration points. The number of FLOPS in the Euler forward algorithm is 5n-flops. Compared to the velocity verlet algorithm, that uses 9n flops, the Euler algorithm is faster. The velocity verlet gets more out of each rotation, hence is more robust for fewer integration points. The potential and kinetic energy oscillates, but is generally conserved over one orbit(figure noe). This is because of the circular orbit,  \\
+
+\noindent The escape velocity of Earth is exactly $v_e=2\sqrt{2}\pi$. This corresponded quite well with the velocity found by trial and error. When the gravitational force was changed by replacing $r^2\rightarrow r^\beta$, the orbit got unstable. The gravitational force will be stronger for low $r$, resulting in higher velocities. The force will decrease more rapidly at higher $r$. This can work like a slingshot-effect, making stable orbits harder to obtain.  
+
+=======
 
 
 
 \noindent The Euler forward method is easy for the computer to handle, but it is not robust for few integration points. The number of FLOPS in the Euler forward algorithm is 5n-flops. Compared to the velocity verlet algorithm, that uses 9n flops, the Euler algorithm is faster. This is shown in table 1. The velocity verlet gets more out of each rotation, hence is more robust for fewer integration points. The velocity that makes a circular orbit is $v=2\pi$. This is pretty logical given the choice of units. As the radius of Earths orbit per definition is 1 AU and the circumference is given by $2\pi r$, the velocity of Earth has to be $2\pi \frac{AU}{year}$ in order to do a full rotation per year. The potential and kinetic energy oscillates, but is generally conserved over one orbit(figure 2). The angular momentum is also conserved. These quantities should be conserved if a planet is an idealized circular orbit, as the radius and velocity is constant.  \\
 
 \noindent The escape velocity of Earth is exactly $v_e=2\sqrt{2}\pi$. This corresponded quite well with the velocity found by trial and error. When the gravitational force was changed by replacing $r^2\rightarrow r^\beta$, where $\beta \in(2,3)$, the orbit got unstable. The gravitational force will be stronger for low $r$, resulting in higher velocities. The force will decrease more rapidly at higher $r$. This can work like a slingshot-effect, making stable orbits harder to obtain.  
+>>>>>>> 218c715cc637d816f1e336e4e2e4249c1ebfb8c6
 
 
 
